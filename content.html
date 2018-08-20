@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="Bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Market Drive</title>
 </head>
 <body>
@@ -30,24 +32,72 @@
                 </ul>
             </nav>
         </div>
-        <!--<nav class="row justify-content-center">-->
-            <!--<ul class="navbar-nav">-->
-                <!--<li class="nav-item"><a href="#" class="nav-link"></a>Каталог товаров</li>-->
-                <!--<li class="nav-item">История</li>-->
-                <!--<li>Шаблоны</li>-->
-                <!--<li>Затраты</li>-->
-            <!--</ul>-->
-        <!--</nav>-->
-
-        <div class="row justify-content-center">
-            <div class="btn-group">
-                <button class="btn btn-secondary" type="button">Каталог товаров</button>
-                <button class="btn btn-secondary" type="button">История</button>
-                <button class="btn btn-secondary" type="button">Шаблоны</button>
-                <button class="btn btn-secondary" type="button">Затраты</button>
-            </div>
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="content.html">Каталог товаров</a>
+                </li>
+                <li>
+                    <a href="#">История</a>
+                </li>
+                <li>
+                    <a href="#">Шаблоны</a>
+                </li>
+                <li>
+                    <a href="#">Затраты</a>
+                </li>
+            </ul>
+        </nav>
         </div>
 
-    </div>
+    <ul id="menu">
+            <li class="list">
+                <span>Продукты питания</span>
+                <ul>
+                    <li id="milk"><a href="#">Молочные изделия</a></li>
+                    <li id="grocery"><a href="#">Бакалея</a></li>
+                    <li id="hotDrinks"><a href="#">Кофе,чай</a></li>
+                    <li id="meat"><a href="#">Мясная гастрономия</a></li>
+                    <li id="fish"><a href="#">Рыбные продукты</a></li>
+                    <li id="snacks"><a href="#">Снеки</a></li>
+                    <li id="drink"><a href="#">Напитки</a></li>
+                    <li id="sauce"><a href="#">Соусы,масло</a></li>
+                    <li id="frozen"><a href="#">Замороженные продукты</a></li>
+                    <li id="sweets"><a href="#">Сладости</a></li>
+                </ul>
+            </li>
+            <li class="list">
+                <span>Товары для животных</span>
+                <ul>
+                    <li id="foodAnimals"><a href="#">Еда для животных</a></li>
+                    <li id="toiletAnimals"><a href="#">Средства для ухода за животными</a></li>
+                </ul>
+            </li>
+            <li class="list">
+                <span>Средства по уходу</span>
+                <ul>
+                    <li id="care"><a href="#">Гигиенические стредсва</a></li>
+                </ul>
+            </li>
+            <li class="list">
+                <span>Товары для дома и семьи</span>
+                <ul>
+                    <li id="goodsHome"><a href="#">Товары для дома</a></li>
+                    <li id="clothes"><a href="#">Одежда</a></li>
+                </ul>
+            </li>
+    </ul>
+    <section class="good">
+        <ul id="result">
+
+        </ul>
+    </section>
+
+
+
+
+    <!--<script type="text/javascript" src="nav-menu.js"></script>-->
+    <!--<script type="text/javascript" src="loadGoods.js"></script>-->
+   <script type="text/javascript" src="showGoods.js"></script>
 </body>
 </html>
