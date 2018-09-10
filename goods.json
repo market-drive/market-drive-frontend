@@ -1,6 +1,6 @@
 [
   {
-    "products": [
+    "storage": [
       {
         "milk": [
           {
@@ -134,8 +134,6 @@
             "imageUrl": "http://www.atbmarket.com/attachments/product_stm/3/3/c/1/d/33c1d700b1251ea610e9d8142a3b4607_295_235_f.jpg"
           },
           {
-            "goodsId": 2,
-            "id": 22,
             "name": "Перець червоний мелений",
             "brand": "ТМ «Розумний вибір» - 20 г м/уп",
             "price": "",

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,23 +11,30 @@
     <title>Market Drive</title>
 </head>
 <body class="text-center">
-<form class="form-signit">
+<form id="formCheckin" name="myForm" class="form-signit">
     <h1 class="h2 mb-2 font-weight-normal">Market Drive</h1>
     <h3 class="h3 mb-3 font-weight-normal">Рутинные покупки - дело одной минуты</h3>
 
-    <label for="userName" class="sr-only"></label>
-    <input type="text" id="userName" class="form-control" placeholder="Ваше имя">
+        <label for="userName" class="sr-only"></label>
+        <input type="text" name="user" id="userName" class="form-control" placeholder="Ваше имя"  required autofocus>
+        <span id="error-name"></span>
 
-    <label for="email" class="sr-only"></label>
-    <input type="email" id="email" class="form-control" placeholder="Электронная почта">
 
-    <label for="password" class="sr-only"></label>
-    <input type="text" id="password" class="form-control" placeholder="Пароль">
+        <label for="email" class="sr-only"></label>
+        <input type="email" name="userEmail" id="email" class="form-control" placeholder="Электронная почта" required >
+        <span id="error-email"></span>
 
-    <label for="repeatPassword" class="sr-only"></label>
-    <input type="text" id="repeatPassword" class="form-control" placeholder="Повторить пароль">
+        <label for="password" class="sr-only"></label>
+        <input type="password" name="userPassword" id="password" class="form-control" placeholder="Пароль" required>
+        <span id="error-password"></span>
 
-    <button class="btn btn-lg btn-outline-secondary btn-block mt-3" type="submit">
+
+
+        <label for="repeatPassword" class="sr-only"></label>
+        <input type="password" id="repeatPassword" class="form-control" placeholder="Повторить пароль" required>
+        <span id="error-confirm"></span>
+
+    <button id="btnCheckIn" class="btn btn-lg btn-outline-secondary btn-block mt-3" type="submit">
         Создать акаунт
     </button>
     <div class="row justify-content-center mt-2">
@@ -45,5 +52,6 @@
         <li><a href="#">Вернуться на главную</a></li>
     </ul>
 </form>
+<script type="text/javascript" src="validation.js"></script>
 </body>
 </html>

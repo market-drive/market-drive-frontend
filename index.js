@@ -1,18 +1,30 @@
-// var section = document.querySelector('section');
-
 window.onload = function () {
-    var getElement = document.getElementById('milk');
 
-    getElement.addEventListener('click', function () {
+    var section = document.querySelector('section');
+
+
+    function loadGoods() {
         var xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'goods.js', true);
+        xhr.open('GET', 'http://54.37.125.180:8080/api/storage', true);
+        xhr.send(section);
 
-        xhr.onload = function () {
-            var section = document.querySelector('section');
-                section.textContent = this.response;
-        };
+        if (xhr.status !== 200 ) {
+            alert (xhr.status + ':' + xhr.responseText);
+        }
+        else {
+            console.log(xhr.responseText);
+        }
 
-        xhr.send();
-    },false);
+    } loadGoods();
+
 };
+
+
+
+
+
+
+
+
+
