@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="additionally_style.css">
     <link rel="stylesheet" href="../style.css">
     <title>Market Drive</title>
 </head>
@@ -48,8 +49,8 @@
         </div>
     </header>
     <main>
-        <div>
-            <table class="table col-7 offset-5">
+        <div class="row">
+            <table class="table col-6 offset-5">
                     <thead>
                         <tr>
                             <td>Товар</td>
@@ -80,19 +81,27 @@
                     </tbody>
             </table>
         </div>
-        <div>
-            <div class="col-2 offset-5">
-                <a class="nav-link" href="#" alt="">Добавить товар</a>
+            <div class="row">
+                <div class="col-2 offset-5">
+                    <a class="nav-link" href="#" alt="">Добавить товар</a>
+                </div>
             </div>
-            <div class="col-2 offset-10">
-                <span>Забрать в</span><input type="time" name="time" />
+            <div class="row">
+                <div class="col-2 offset-10">
+                    <span>Забрать в</span><input type="time" name="time" />
+                </div>
             </div>
-        </div>
-        <div class="col-3">
-            <button class="btn btn-outline-secondary my-2 my-sm-0">Создать шаблон</button>
-            <button class="btn btn-outline-secondary my-2 my-sm-0">Удалить шаблон</button>
-        </div>
-        <div></div>
+            <div class="row">
+                <div class="col-3 offset-1">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0">Создать шаблон</button>
+                    <button class="btn btn-outline-secondary my-2 my-sm-0">Удалить шаблон</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 offset-8">
+                    <button class="btn-fixed btn btn-outline-secondary">Добавить в корзину</button>
+                </div>
+            </div>
     </main>
 </body>
 </html>
