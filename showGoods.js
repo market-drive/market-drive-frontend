@@ -33,7 +33,7 @@ window.onload = function () {
 
     let cart = {}; //корзина
 
-   $.getJSON('http://54.37.125.180:8080/marketdrive/products', function (data) {
+   $.getJSON('http://54.37.125.180:8080/marketdrive/api/products', function (data) {
 
        let arrStorage;
        for (key in data) {
