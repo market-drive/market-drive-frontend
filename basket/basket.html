@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href=" ../templates/additionally_style.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Market Drive</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+                <nav class="navbar navbar-expand-lg">
+                    <h1 class="h2">Market Drive</h1>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input type="search" class="form-control m-sm-2" placeholder="Найти товар" aria-label="Search">
+                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Найти</button>
+                    </form>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Настройки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Выход</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="../content.html">Каталог товаров</a>
+                    </li>
+                    <li>
+                        <a href="#">История</a>
+                    </li>
+                    <li>
+                        <a href="../templates/templates.html">Шаблоны</a>
+                    </li>
+                    <li>
+                        <a href="../expenses/expenses.html">Затраты</a>
+                    </li>
+                    <li>
+                        <a href="basket.html">Корзина</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <div class="row">
+        <table class="table col-6 offset-3">
+                <thead>
+                    <tr>
+                        <td>Товар</td>
+                        <td>Кол-во</td>
+                        <td>Цена сегодня</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Батон нарезной</td>
+                        <td><input type="number" name="number" class="number" value="0" min="0"/></td>
+                        <td>7,5</td>
+                        <td>Х</td>
+                    </tr>
+                    <tr>
+                        <td>Молоко 2.5%</td>
+                        <td><input type="number" name="number" class="number" value="0" min="0"/></td>
+                        <td>23</td>
+                        <td>Х</td>
+                    </tr>
+                    <tr>
+                        <td>Мыло Шик</td>
+                        <td><input type="number" name="number" class="number" value="0" min="0" /></td>
+                        <td>10</td>
+                        <td>Х</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+        <div class="row">
+            <div class="col-2 offset-3">
+                <a class="nav-link" href="#" alt="">Добавить товар</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 offset-8">
+                <span>Забрать в</span><input type="time" name="time" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 offset-5">
+                <button class="btn-fixed btn btn-outline-secondary">Сформировать заказ</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
