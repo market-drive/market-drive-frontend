@@ -56,7 +56,6 @@ body{
 }
 /* menu goods*/
 
-
 #menu {
     display: flex;
     justify-content: flex-start;
@@ -71,7 +70,8 @@ body{
     border-radius: 5px;
     text-decoration: none;
     margin-top: 5px;
-
+    font-family: "Segoe UI";
+    font-weight: normal;
 }
 #menu span{
     cursor: pointer;
@@ -90,16 +90,33 @@ body{
 #result{
     display: grid;
     grid-template-columns: repeat(4, 0.5fr);
-    /*auto-fit,minmax(80px,1fr)*/
     font-size: 15px;
     margin-top: 5px;
     overflow-y: scroll;
     box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
     -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+    border-radius: 5px;
     float: right;
-    width: 65%;
+    width: 67%;
     height: 100%;
     margin-right: 15px;
+    font-family: "Segoe UI";
+    font-weight: normal;
+}
+.goods-list{
+    position: relative;
+    height: 300px;
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+    margin: 10px 10px;
+    text-align: center;
+}
+.send-goods{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    margin: 10px 10px;
 }
 #result::-webkit-scrollbar{
     width: 5px;
