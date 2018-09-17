@@ -16,10 +16,12 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <nav class="navbar navbar-expand-lg">
-                    <h1 class="h2">Market Drive</h1>
+                    <div class="logo">
+                        <img src="../logo.png" alt="logo">
+                    </div>
                     <form class="form-inline my-2 my-lg-0">
                         <input type="search" class="form-control m-sm-2" placeholder="Найти товар" aria-label="Search">
-                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Найти</button>
+                        <button class="btn btn-main my-2 my-sm-0" type="submit">Найти</button>
                     </form>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -78,8 +80,8 @@
                     </tr>
                     <tr>
                         <td class="goods-result">Мыло Шик</td>
-                        <td><input id="numder3" type="number" name="number" class="number" value="0" min="0" /></td>
-                        <td>10</td>
+                        <td><input id="number3" type="number" name="number" class="number" value="0" min="0" /></td>
+                        <td class="price">10</td>
                         <td>грн</td>
                     </tr>
                 </tbody>
@@ -97,7 +99,7 @@
         </div>
         <div class="row">
             <div class="col-2 offset-5">
-                <button class="btn-fixed btn btn-outline-secondary">Сформировать заказ</button>
+                <button class="btn-fixed btn btn-main">Оформить заказ</button>
             </div>
         </div>
     </main>

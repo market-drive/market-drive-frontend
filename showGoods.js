@@ -319,10 +319,19 @@ window.onload = function () {
                 clothesClick.addEventListener('click', clothesShow);
             }
         });
+
+        for (let e = 0; e < data.length; e++) {
+            console.log(data[2]);
+        }
+
     });
+
+
    // добавление товара в корзину
     function addToBasket() {
         let storage = $(this).attr('data-art');
+
+
         if (basket[storage] !== undefined) {
             basket[storage] ++;
         } else  {
