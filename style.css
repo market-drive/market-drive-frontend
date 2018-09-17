@@ -118,6 +118,9 @@ body{
     bottom: 0;
     margin: 10px 10px;
 }
+.quantity{
+
+}
 #result::-webkit-scrollbar{
     width: 5px;
 }

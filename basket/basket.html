@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href=" ../templates/additionally_style.css">
     <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Market Drive</title>
 </head>
 <body>
@@ -64,22 +65,22 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Батон нарезной</td>
-                        <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                        <td>7,5</td>
-                        <td>Х</td>
+                        <td class="goods-result">Батон нарезной</td>
+                        <td><input id="number1" type="number" name="number" class="number" value="0" min="0"/></td>
+                        <td class="price">7,5</td>
+                        <td>грн</td>
                     </tr>
                     <tr>
-                        <td>Молоко 2.5%</td>
-                        <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                        <td>23</td>
-                        <td>Х</td>
+                        <td class="goods-result">Молоко 2.5%</td>
+                        <td><input id="number2" type="number" name="number" class="number" value="0" min="0"/></td>
+                        <td class="price">23</td>
+                        <td>грн</td>
                     </tr>
                     <tr>
-                        <td>Мыло Шик</td>
-                        <td><input type="number" name="number" class="number" value="0" min="0" /></td>
+                        <td class="goods-result">Мыло Шик</td>
+                        <td><input id="numder3" type="number" name="number" class="number" value="0" min="0" /></td>
                         <td>10</td>
-                        <td>Х</td>
+                        <td>грн</td>
                     </tr>
                 </tbody>
         </table>
@@ -100,5 +101,7 @@
             </div>
         </div>
     </main>
+
+    <script type="text/javascript" src="basket.js"></script>
 </body>
 </html>

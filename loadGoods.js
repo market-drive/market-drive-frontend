@@ -47,50 +47,50 @@ window.onload = function () {
 
     var goods = {
 
-        "milk": [
-            {
+        "milk": {
+            "1": {
                 "name": "Сир твердий Звенигородский 50%",
                 "brand": "ТМ «Своя лінія» - 200 г",
                 "price": " ціна 25 ",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/a/c/c/3/3/acc33e4591fd70d2d3d39daf0d5b8324_295_235_f.jpg"
 
             },
-            {
+            "2": {
                 "name": "Сир твердий «Російський» 45%",
                 "brand": "ТМ «Своя лінія» - 200 г",
                 "price": " ціна 33.20 грн.",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/f/5/f/3/c/f5f3c55446ed6b338dfb6a92c8ec02da_295_235_f.jpg"
 
             },
-            {
+            "3": {
                 "name": "Сир Голландский,45%",
                 "brand": "ТМ «Своя лінія» - 200 г",
                 "price": " ціна 36 грн.",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/c/9/9/b/0/c99b07253190af6460ebba27c294044d_295_235_f.jpg"
 
             },
-            {
+            "4": {
                 "name": "Продукт молоковмісний сирний «Руський класичний»",
                 "brand": "ТМ «Розумний вибір» - 180 г",
                 "price": " ціна 29.25 ",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/8/c/2/a/0/8c2a096015038b56be1d02db05f3b810_295_235_f.jpg"
 
             },
-            {
+            "5": {
                 "name": "Молоко згущене незбиране з цукром",
                 "brand": "ТМ «Своя лінія» - 370 г",
                 "price": " ціна 25.60 грн.",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/d/e/4/6/1/de461484eed5f52d860c53c718651019_295_235_f.jpg"
 
             },
-            {
+            "6": {
                 "name": "Молоко згущене варене «Іриска»",
                 "brand": "ТМ «Своя лінія» - 370 г",
                 "price": " ціна 36 грн.",
                 "imageUrl": "http://www.atbmarket.com/attachments/product_stm/9/3/2/7/6/93276186541af982701e7fa52a005da9_295_235_f.jpg"
 
             }
-        ],
+        },
 
 
         "grocery": [
