@@ -30,7 +30,7 @@ body{
 }
 
 /* navigation*/
-.main-nav ul{
+/*.main-nav ul{
     display: grid;
     grid-gap: 20px;
     padding: 0;
@@ -53,7 +53,7 @@ body{
 .main-nav a:hover{
     background: #0ec491;
     color: #fff;
-}
+}*/
 /* menu goods*/
 
 #menu {
@@ -150,3 +150,4 @@ body{
     background: #086c65;
     color: #fff;
 }
+
