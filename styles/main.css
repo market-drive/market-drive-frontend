@@ -6,9 +6,9 @@ body {
   display: block;
   padding-bottom: 40px;
   background-color: #fff;
-  font-family: "Raleway";
+  font-family: "Noto Serif", serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .container {
@@ -33,7 +33,7 @@ header form {
   margin-left: 200px;
 }
 header form .input-search {
-  width: 130px;
+  width: 150px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
@@ -60,7 +60,9 @@ header form .button-search:hover {
   color: #fff;
 }
 header .exit {
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-left: 50px;
   width: 70px;
   height: 25px;
 }
@@ -70,17 +72,32 @@ header .exit .exit-link {
   color: #3cabfe;
   text-decoration: none;
   padding: 0 20px;
+  text-align: center;
 }
 header .exit .exit-link:hover {
   border-radius: 50px;
   background-color: #3cabfe;
   color: #fff;
 }
+header .exit .exit-link::before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: -10px;
+  margin-left: -20px;
+  height: 40px;
+  width: 40px;
+  background-image: url(../images/icons.png);
+  background-position: 115px 40px;
+}
+header .exit .exit-link:hover::before {
+  background-position: 115px 80px;
+}
 
 .background-image {
   width: calc(100% - 30px);
   height: 350px;
-  background: url(../background-image.jpg) center;
+  background: url(../images/background-image.jpg) center bottom;
   z-index: -2;
 }
 
