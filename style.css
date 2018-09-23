@@ -89,7 +89,7 @@ input::-webkit-input-placeholder {
 }
 
 /* navigation*/
-.main-nav ul{
+/*.main-nav ul{
     display: grid;
     grid-gap: 20px;
     padding: 0;
@@ -112,7 +112,7 @@ input::-webkit-input-placeholder {
 .main-nav a:hover{
     background: #0ec491;
     color: #fff;
-}
+}*/
 /* menu goods*/
 
 #menu {
