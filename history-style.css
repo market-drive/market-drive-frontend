@@ -184,17 +184,25 @@ body {
 }
 
 .td, .th {
-	border: 1px solid #000;
 	text-align: center;
 	padding: 4px; 
 	box-sizing: border-box;
+
+}
+ .td {
+	padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+ }
+
+
+thead {
+	background-color: #0ec491;
+	border: none;
 }
 
-.th-first {
-	border-top-left-radius: 7px;
-}
+
 .th-last {
-	border-top-right-radius: 7px;
 	width: 108px;
 }
 
