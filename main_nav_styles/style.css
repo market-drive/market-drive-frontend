@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Noto Serif', serif;
+  font-size: 15px;
+}
+
 .main-nav {
   width: 100%;
   min-height: 200px;
@@ -23,7 +28,7 @@
   height: 40px;
   color: #016e9d;
   text-decoration: none;
-  line-height: 40px;
+  line-height: 25px;
   font-size: 15px;
   border: 1px solid #00e1c7;
   border-radius: 20px;
@@ -34,8 +39,8 @@
   width: 40px;
   height: 40px;
   margin-right: 20px;
-  margin-left: -1px;
-  margin-top: -1px;
+  margin-left: -13px;
+  margin-top: -10px;
   float: left;
   content: " ";
   background-image: url(../images/icons.png);

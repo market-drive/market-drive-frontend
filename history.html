@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./main_nav_styles/style.css">
+    <link rel="stylesheet" type="text/css" href="history-style.css">
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Market Drive</title>
+</head>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 logo">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <form class="col-lg-3 col-md-3">
+                <i class="fas fa-search"></i><input type="search" class="input-search" placeholder="найти товар..." aria-label="Search">
+            <button class="button-search" type="submit">найти</button>
+            </form>
+            <div class="exit col-lg-2 col-md-2">
+                <button class="exit-link" type="submit">Выход</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="background-image"></div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="row">
+                    <ul class="main-nav offset-lg-2">
+                        <li>
+                            <a href="content.html" class="catalog">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="history.html" class="history">История</a>
+                        </li>
+                        <li>
+                            <a href="./templates/templates.html" class="template">Шаблоны</a>
+                        </li>
+                        <li>
+                            <a href="./expenses/expenses.html" class="cost">Затраты</a>
+                        </li>
+                        <li>
+                            <a href="./basket/basket.html" class="buy">Корзина</a>
+                        </li>
+                    </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="offset-lg-1 content-container">  
+                <div class="content-title">
+                    <div class="title-date-wrap">    
+                        <div class="history-title-wrap"> <h2 class="history-title">История покупок</h2></div>
+                        <!-- <span style="margin-left: 15px; font-size: 16px; Color: #666666">Покупки за период</span>
+                        <input type="date" style="margin-left: 15px; max-width: 200px;" name="date" class="input-date"> -->
+                        
+                    </div>
+                    <div class="history-sumRepeatWrap">
+                        <div class="history-sumWrap">Покупка:<span class= "date"></span> Сумма: <span class= "sum"></span> </div>  
+                        <ul class="history-linkContain">
+                            <li class="history-navItem">
+                                <span class="history-navSpan" href="#">Повторить</span>
+                            </li>
+                        </ul>
+
+                    </div>    
+                    
+                </div>
+
+                <div class="col-lg-11 more-info">
+                    <div class="purch-item"></div>
+                    <div class="purch-list"></div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+    </main>
+    <script src="history-js.js"></script>
+</body>
+</html>
