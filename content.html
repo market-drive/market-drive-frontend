@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="main_nav_styles/style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -42,7 +41,7 @@
         <div class="container padding-reset">
             <div class="content">
                 <nav class="row">
-                    <ul class="main-nav offset-lg-2">
+                    <ul class="main-nav col-lg-12 col-xl-10 offset-xl-2">
                         <li>
                             <a href="content.html" class="catalog">Каталог</a>
                         </li>
@@ -64,7 +63,7 @@
                     </ul>
                 </nav>
         <div class="row">
-        <ul id="menu">
+        <ul id="menu" class="col-lg-3">
             <li class="list">
                 <span>Продукты питания</span>
                 <ul>
@@ -114,15 +113,24 @@
         <div class="footer-contact">
                 <div class="container">
                         <div class="row">
-                            <div class="mail col-lg-4 offset-lg-1"><p>Будьте в курсе последних новостей проекта!</p></div>
-                            <input type="email" class="input-email col-lg-3" placeholder="Ваш email..." aria-label="Email">
-                            <button class="button-email col-lg-2" type="submit">отправить</button>
+                            <div class="mail col-lg-4 offset-lg-1 col-md-5"><p>Будьте в курсе последних новостей проекта!</p></div>
+                            <input type="email" class="input-email col-lg-3 col-md-2" placeholder="Ваш email..." aria-label="Email">
+                            <button class="button-email col-lg-2 col-md-2" type="submit">отправить</button>
                         </div>
                     </div>
         </div>
         <div class="footer-content">
             <div class="aside"></div>
-            <div class="footer-image"></div>
+            <div class="footer-image">
+                    <div class="container">
+                            <div class="row">
+                                <ul class="social-menu col-xl-2 offset-xl-10 col-lg-3 offset-lg-9 col-md-3 offset-md-9">
+                                    <li class="item"><a href="#" class="fasebook"></a></li>
+                                    <li class="item"><a href="#" class="google"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
             <div class="aside"></div>
         </div>
     </footer>

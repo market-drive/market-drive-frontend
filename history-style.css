@@ -23,8 +23,8 @@ body {
 
 .history-linkContain {
 	margin: 0px;
-    position: absolute;
-    right: 150px;
+    position: relative;
+    right: -95px;
 }
 
 .header-searchInp {
@@ -79,7 +79,7 @@ body {
 .history-title-wrap {
     display: flex;
     justify-content: flex-start;
-    margin-left: 15px;
+    margin-left: 70px;
     align-items: center;
 }
 
@@ -111,7 +111,6 @@ body {
 .more-info {
 	display: flex;
 	justify-content: space-between;
-	margin-left: 10px;
 	margin-top: 15px;
 }
 .purch-item {
@@ -137,7 +136,7 @@ body {
 
 
 .history-sumWrap {
-	margin-left: 20px;
+	margin-left: 0;
 }
 
 .history-sumRepeatWrap {
@@ -178,7 +177,8 @@ body {
 }
 
 .table {
-	width: 700px; 
+	margin-left: 10px;
+	width: 660px;
 	border-collapse: collapse;
 	margin-bottom: 20px;
 }

@@ -24,7 +24,7 @@ body {
 
 .main-nav li a {
   display: inline-block;
-  width: 170px;
+  width: 155px;
   height: 40px;
   color: #016e9d;
   text-decoration: none;
@@ -47,43 +47,43 @@ body {
 }
 
 .catalog::before {
-  background-position: -5px 0;
+  background-position: 0 0;
 }
 
 .catalog:hover::before {
-  background-position: -5px 40px;
+  background-position: 240px -40px;
 }
 
 .history::before {
-  background-position: -45px 0;
+  background-position: -40px 0;
 }
 
 .history:hover::before {
-  background-position: -45px -40px;
+  background-position: -40px -40px;
 }
 
 .template::before {
-  background-position: -85px 0;
+  background-position: -80px 0;
 }
 
 .template:hover::before {
-  background-position: -85px 40px;
+  background-position: -80px -40px;
 }
 
 .cost::before {
-  background-position: 195px 0;
+  background-position: 200px 0;
 }
 
 .cost:hover::before {
-  background-position: 195px 40px;
+  background-position: 200px -40px;
 }
 
 .buy::before {
-  background-position: 155px 0;
+  background-position: 320px 0;
 }
 
 .buy:hover::before {
-  background-position: 155px 40px;
+  background-position: 320px -40px;
 }
 
 /*# sourceMappingURL=style.css.map */
