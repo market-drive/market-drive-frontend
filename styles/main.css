@@ -418,9 +418,46 @@ footer .social-menu .google:hover {
     margin-left: -25px;
   }
 }
-@media all and (max-width: 991px) {
+@media all and (max-width: 991px) and (min-width: 768px) {
   .main-nav {
     display: none;
+  }
+
+  header form {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  header .exit {
+    margin-left: -20px;
+  }
+  header .button-search {
+    display: none;
+  }
+  header .fa-search {
+    position: relative;
+    left: 170px;
+    background-color: #00e1c7;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 4px;
+  }
+  header .fa-search:hover {
+    background-color: #f1f1f1;
+    color: #00e1c7;
+  }
+
+  .background-image {
+    background-image: none;
+    background-color: #7fc0f1;
+    height: 125px;
+  }
+
+  .table-margin {
+    margin-top: 45px;
   }
 }
 
