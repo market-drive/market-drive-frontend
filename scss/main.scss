@@ -134,13 +134,22 @@ header {
 /*content*/
 
 .hamburger {
-    background: url(../images/icons.png) no-repeat; //Глеб скинет нужную картинку
-    background-position: 2px -80px;
     width: 68px;
     height: 68px;
     margin-top: -85px;
     z-index: 5;
-
+}
+.hamburger-image {
+    background: url(../images/iconHum.png) no-repeat;
+    background-position: 0px -136px;
+}
+.navbar-toggler[aria-expanded="false"]{
+    
+        .hamburger-image {
+            background: url(../images/iconHum.png) no-repeat;
+            background-position: 0px 0px;
+        }
+    
 }
 
 .p-4 {
