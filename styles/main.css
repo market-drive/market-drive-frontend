@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  position: relative;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   font-size: 17px;
   overflow-x: hidden;
   background: url(../images/background-light.png) repeat;
+  height: 100%;
 }
 
 h1, h2 {
@@ -126,12 +128,12 @@ ul {
 
 .hamburger-image {
   background: url(../images/iconHum.png) no-repeat;
-  background-position: 0px -136px;
+  background-position: -1px -136px;
 }
 
 .navbar-toggler[aria-expanded=false] .hamburger-image {
   background: url(../images/iconHum.png) no-repeat;
-  background-position: 0px 0px;
+  background-position: -1px 0px;
 }
 
 .p-4 {
@@ -146,7 +148,7 @@ ul {
 }
 .hamburger-menu .hamburger-item {
   list-style-type: none;
-  background-color: #368bd6;
+  background-color: #3399cc;
   width: 160px;
   text-align: center;
   border: 1px solid #fff;
@@ -166,6 +168,7 @@ thead {
 
 .content {
   background: #fcfcfc;
+  height: 100%;
 }
 
 /*sing in website*/
@@ -319,6 +322,8 @@ thead {
 
 /*footer*/
 footer {
+  position: relative;
+  bottom: 0;
   width: 100%;
   height: 200px;
   background: #3cabfe;
@@ -382,6 +387,7 @@ footer .button-email {
   margin-left: 20px;
   border-radius: 50px;
   border: 1px solid #00e1c7;
+  background-color: #fff;
 }
 footer .button-email:hover {
   background-color: #00e1c7;
@@ -455,7 +461,7 @@ footer .social-menu .google:hover {
 
   .background-image {
     background-image: none;
-    background-color: #7fc0f1;
+    background-color: #fcfcfc;
     height: 125px;
   }
 

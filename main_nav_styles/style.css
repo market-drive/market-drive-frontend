@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  height: 100%;
+}
+
 
 .main-nav {
   width: 100%;
@@ -67,11 +71,11 @@
 }
 
 .cost::before {
-  background-position: 200px 0;
+  background-position: 120px 0;
 }
 
 .cost:hover::before {
-  background-position: 200px -40px;
+  background-position: 120px -40px;
 }
 
 .buy::before {
