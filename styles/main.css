@@ -22,6 +22,14 @@ button:focus {
   outline: 0;
 }
 
+.btn-main {
+  border: 2px solid #086c65;
+  color: #000;
+  background-color: transparent;
+  margin-bottom: 10px;
+  width: 185px;
+}
+
 /* registry */
 .white-background {
   background-image: none;
@@ -325,35 +333,22 @@ thead {
 #goods-list {
   position: relative;
   height: 300px;
-  /*box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
-  /*-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
   margin: 10px 10px;
   text-align: center;
 }
 
-.btn-add {
+.send-goods {
   display: flex;
   justify-content: flex-start;
   background-color: #fff;
   border-radius: 20px;
-  width: 90px;
+  width: 75px;
   padding-left: 5px;
   position: absolute;
   bottom: 0;
   margin: 10px 10px;
-  padding-left: 10px;
-}
-.template-add{
-  display: flex;
-  justify-content: flex-start;
-  background-color: #fff;
-  border-radius: 20px;
-  width: 90px;
-  padding-left: 5px;
-  position: absolute;
-  bottom: 0;
-  margin: 10px 10px;
-  padding-left: 9px;
 }
 
 .send-goods:hover {
@@ -369,14 +364,6 @@ thead {
 #result::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.7);
-}
-
-.btn-main {
-  border: 2px solid #086c65;
-  color: #000;
-  background-color: transparent;
-  margin-bottom: 10px;
-  width: 160px;
 }
 
 .btn-main:hover {
