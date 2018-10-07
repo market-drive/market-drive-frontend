@@ -5,39 +5,38 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="Bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../main_nav_styles/style.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../assets/charts.js"></script>
-    <script src="../Bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script src="../index.js"></script> -->
+    <link rel="stylesheet" href="./main_nav_styles/style.css">
+    <link rel="stylesheet" type="text/css" href="history-style.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Market Drive</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-xl-4 col-lg-4 logo">
-                    <img src="../images/logo.png" alt="logo">
-                </div>
-                <form class="col-md-4 col-lg-3">
-                    <a href="#" alt=""><i class="fas fa-search"></a></i></i><input type="search" class="input-search" placeholder="найти товар..." aria-label="Search">
-                    <button class="button-search" type="submit">найти</button>
-                </form>
-                <div class="exit col-lg-2 col-md-3">
-                    <button class="exit-link" type="submit">Выход</a>
-                </div>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-xl-4 col-lg-4 logo">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <form class="col-md-4 col-lg-3">
+                <a href="#" alt=""><i class="fas fa-search"></a></i></i><input type="search" class="input-search" placeholder="найти товар..." aria-label="Search">
+                <button class="button-search" type="submit">найти</button>
+            </form>
+            <div class="exit col-lg-2 col-md-3">
+                <button class="exit-link" type="submit">Выход</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+<body>
     <main>
         <div class="container">
             <div class="row">
@@ -57,11 +56,11 @@
                                 <div class="collapse" id="navbarToggleExternalContent">
                                     <div class="p-4">
                                         <ul class="hamburger-menu">
-                                            <li class="hamburger-item"><a href="../content.html" class="hamburger-link" alt="">Каталоги</a></li>
-                                            <li class="hamburger-item"><a href="../history.html" class="hamburger-link" alt="">История</a></li>
-                                            <li class="hamburger-item"><a href="../templates/templates.html" class="hamburger-link" alt="">Шаблоны</a></li>
-                                            <li class="hamburger-item"><a href="../expenses/expenses.html" class="hamburger-link" alt="">Затраты</a></li>
-                                            <li class="hamburger-item"><a href="../basket/basket.html" class="hamburger-link" alt="">Корзина</a></li>
+                                            <li class="hamburger-item"><a href="content.html" class="hamburger-link" alt="">Каталоги</a></li>
+                                            <li class="hamburger-item"><a href="history.html" class="hamburger-link" alt="">История</a></li>
+                                            <li class="hamburger-item"><a href="./templates/templates.html" class="hamburger-link" alt="">Шаблоны</a></li>
+                                            <li class="hamburger-item"><a href="./expenses/expenses.html" class="hamburger-link" alt="">Затраты</a></li>
+                                            <li class="hamburger-item"><a href="./basket/basket.html" class="hamburger-link" alt="">Корзина</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -70,39 +69,49 @@
             <nav class="row">
                 <ul class="main-nav col-lg-12 col-xl-10 offset-xl-2">
                         <li>
-                            <a href="../content.html" class="catalog">Каталог</a>
+                            <a href="content.html" class="catalog">Каталог</a>
                         </li>
                         <li>
-                            <a href="../history.html" class="history">История</a>
+                            <a href="history.html" class="history">История</a>
                         </li>
                         <li>
-                            <a href="../templates/templates.html" class="template">Шаблоны</a>
+                            <a href="./templates/templates.html" class="template">Шаблоны</a>
                         </li>
                         <li>
-                            <a href="expenses.html" class="cost">Затраты</a>
+                            <a href="./expenses/expenses.html" class="cost">Затраты</a>
                         </li>
                         <li>
-                            <a href="../basket/basket.html" class="buy">Корзина</a>
+                            <a href="./basket/basket.html" class="buy">Корзина</a>
                         </li>
                     </ul>
             </nav>
+        <div class="container">
+            <div class="content-container">  
+                <div class="content-title">
+                    <div class="title-date-wrap">    
+                        <div class="history-title-wrap"> <h2 class="history-title">История покупок</h2></div>
+                        <!-- <span style="margin-left: 15px; font-size: 16px; Color: #666666">Покупки за период</span>
+                        <input type="date" style="margin-left: 15px; max-width: 200px;" name="date" class="input-date"> -->
+                        
+                    </div>
+                    <div class="history-sumRepeatWrap">
+                        <div class="history-sumWrap">Покупка:<span class= "date"></span> Сумма: <span class= "sum"></span> </div>  
+                        <ul class="history-linkContain">
+                            <li class="history-navItem">
+                                <span class="history-navSpan" href="#">Повторить</span>
+                            </li>
+                        </ul>
 
-        <div class="row">
-            <div class="col-3">
-                <ul id="menu">
-                    <li><a href="expenses.html">За неделю</a></li>
-                    <li><a href="expenses-month.html">За месяц</a></li>
-                    <li><a href="expenses-year.html">За год</a></li>
-                    <li><a href="expenses-own.html">Свой выбор</a></li>
-                </ul>
-            </div>
-            <div class="main-content col-9">
-                <form class="d-flex justify-content-around" action="#">
-                        <label>С: <input type="date" name="statistics-from" readonly></label> 
-                        <label>По: <input type="date" name="statistics-to" readonly></label>
-                        <input type="submit" value="Отправить" disabled>
-                    </form>
-                <div class="charts" id="piechart"></div>
+                    </div>    
+                    
+                </div>
+                    <div class="row">
+                        <div class="col-md-12 col-xl-12 col-lg-12 more-info">
+                                <div class="offset-xl-1 purch-item"></div>
+                                <div class="purch-list"></div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
@@ -132,8 +141,9 @@
                 <div class="aside"></div>
             </div>
         </footer>
-        <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+      <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="history-js.js"></script>
 </body>
 </html>

@@ -5,19 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="Bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../main_nav_styles/style.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../assets/charts.js"></script>
-    <script src="../Bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script src="../index.js"></script> -->
-
-
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="main_nav_styles/style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Market Drive</title>
 </head>
@@ -26,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-xl-4 col-lg-4 logo">
-                    <img src="../images/logo.png" alt="logo">
+                    <img src="./images/logo.png" alt="logo">
                 </div>
                 <form class="col-md-4 col-lg-3">
                     <a href="#" alt=""><i class="fas fa-search"></a></i></i><input type="search" class="input-search" placeholder="найти товар..." aria-label="Search">
@@ -57,55 +51,87 @@
                                 <div class="collapse" id="navbarToggleExternalContent">
                                     <div class="p-4">
                                         <ul class="hamburger-menu">
-                                            <li class="hamburger-item"><a href="../content.html" class="hamburger-link" alt="">Каталоги</a></li>
-                                            <li class="hamburger-item"><a href="../history.html" class="hamburger-link" alt="">История</a></li>
-                                            <li class="hamburger-item"><a href="../templates/templates.html" class="hamburger-link" alt="">Шаблоны</a></li>
-                                            <li class="hamburger-item"><a href="../expenses/expenses.html" class="hamburger-link" alt="">Затраты</a></li>
-                                            <li class="hamburger-item"><a href="../basket/basket.html" class="hamburger-link" alt="">Корзина</a></li>
+                                            <li class="hamburger-item"><a href="content.html" class="hamburger-link" alt="">Каталоги</a></li>
+                                            <li class="hamburger-item"><a href="history.html" class="hamburger-link" alt="">История</a></li>
+                                            <li class="hamburger-item"><a href="./templates/templates.html" class="hamburger-link" alt="">Шаблоны</a></li>
+                                            <li class="hamburger-item"><a href="./expenses/expenses.html" class="hamburger-link" alt="">Затраты</a></li>
+                                            <li class="hamburger-item"><a href="./basket/basket.html" class="hamburger-link" alt="">Корзина</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                     </div>
-            <nav class="row">
-                <ul class="main-nav col-lg-12 col-xl-10 offset-xl-2">
+                <nav class="row">
+                    <ul class="main-nav col-lg-12 col-xl-10 offset-xl-2">
                         <li>
-                            <a href="../content.html" class="catalog">Каталог</a>
+                            <a href="content.html" class="catalog">Каталог</a>
                         </li>
                         <li>
-                            <a href="../history.html" class="history">История</a>
+                            <a href="history.html" class="history">История</a>
                         </li>
                         <li>
-                            <a href="templates.html" class="template">Шаблоны</a>
+                            <a href="./templates/templates.html" class="template">Шаблоны</a>
                         </li>
                         <li>
-                            <a href="../expenses/expenses.html" class="cost">Затраты</a>
+                            <a href="./expenses/expenses.html" class="cost">Затраты</a>
+        <!--<<<<<<< HEAD-->
+        <!--=======-->
                         </li>
                         <li>
-                            <a href="../basket/basket.html" class="buy">Корзина</a>
+                            <a href="./basket/basket.html" class="buy">Корзина</a>
+        <!--&gt;>>>>>> eca599e640b3bb3c24577eba1f7107c6faefe7de-->
                         </li>
                     </ul>
-            </nav>
+                </nav>
         <div class="row">
-            <div class="col-3">
-                <ul id="menu">
-                    <li><a href="expenses.html">За неделю</a></li>
-                    <li><a href="expenses-month.html">За месяц</a></li>
-                    <li><a href="expenses-year.html">За год</a></li>
-                    <li><a href="expenses-own.html">Свой выбор</a></li>
+           <div class="col-lg-12 col-md-12 col-xl-4">
+        <ul id="menu">
+            <li class="list">
+                <span>Продукты питания</span>
+                <ul>
+                    <li id="milk"><a methods="get" href="#">Молочные изделия</a></li>
+                    <li id="grocery"><a href="#">Бакалея</a></li>
+                    <li id="hotDrinks"><a href="#">Кофе,чай</a></li>
+                    <li id="meat"><a href="#">Мясная гастрономия</a></li>
+                    <li id="fish"><a href="#">Рыбные продукты</a></li>
+                    <li id="snacks"><a href="#">Снеки</a></li>
+                    <li id="drink"><a href="#">Напитки</a></li>
+                    <li id="sauce"><a href="#">Соусы,масло</a></li>
+                    <li id="frozen"><a href="#">Замороженные продукты</a></li>
+                    <li id="sweets"><a href="#">Сладости</a></li>
                 </ul>
-            </div>
-            <div class="main-content col-9">
-                <form class="d-flex justify-content-around" action="#">
-                        <label>С: <input type="date" name="statistics-from"></label> 
-                        <label>По: <input type="date" name="statistics-to"></label>
-                        <input type="submit" value="Отправить">
-                    </form>
-                <div class="charts" id="piechart"></div>
-            </div>
-        </div>
+            </li>
+            <li class="list">
+                <span>Товары для животных</span>
+                <ul>
+                    <li id="foodAnimals"><a href="#">Еда для животных</a></li>
+                    <li id="toiletAnimals"><a href="#">Средства для ухода за животными</a></li>
+                </ul>
+            </li>
+            <li class="list">
+                <span>Средства по уходу</span>
+                <ul>
+                    <li id="care"><a href="#">Гигиенические стредсва</a></li>
+                </ul>
+            </li>
+            <li class="list">
+                <span>Товары для дома и семьи</span>
+                <ul>
+                    <li id="goodsHome"><a href="#">Товары для дома</a></li>
+                    <li id="clothes"><a href="#">Одежда</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
+    <div class="col-md-12 col-lg-12 col-xl-8">
+            <section class="good">
+                <div id="result">
+
+                </div>
+            </section> 
+    </div>  
 </div>
+ </div>
 </main>
 <footer>
         <div class="footer-contact">
@@ -132,6 +158,8 @@
             <div class="aside"></div>
         </div>
     </footer>
+    <!--<script type="text/javascript" src="loadGoods.js"></script>-->
+    <script type="text/javascript" src="../showGoods.js"></script>
     <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
