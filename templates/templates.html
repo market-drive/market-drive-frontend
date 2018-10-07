@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="additionally_style.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../main_nav_styles/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../showGoods.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
     <title>Market Drive</title>
 </head>
-<body>
+<body data-page="template">
     <header>
         <div class="container">
                 <div class="row">
@@ -26,7 +29,7 @@
                             <button class="button-search" type="submit">найти</button>
                         </form>
                         <div class="exit col-lg-2 col-md-3">
-                            <button class="exit-link" type="submit">Выход</a>
+                            <button class="exit-link" type="submit">Выход</button>
                         </div>
                 </div>
         </div>
@@ -105,60 +108,12 @@
                             <td></td>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Батон нарезной</td>
-                            <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                            <td>7,5</td>
-                            <td>Х</td>
-                        </tr>
-                        <tr>
-                            <td>Молоко 2.5%</td>
-                            <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                            <td>23</td>
-                            <td>Х</td>
-                        </tr>
-                        <tr>
-                            <td>Мыло Шик</td>
-                            <td><input type="number" name="number" class="number" value="0" min="0" /></td>
-                            <td>10</td>
-                            <td>Х</td>
-                        </tr>
+                    <tbody id="template-item">
+                <tr><td colspan="6"></td>
+                    <!--вывод шаблона-->
+                </tr>
                     </tbody>
             </table>
-
-            <div class="offset-md-4 col-md-7 offset-lg-4 col-lg-7">
-                <table class="table table-margin">
-                        <thead>
-                            <tr>
-                                <td>Товар</td>
-                                <td>Кол-во</td>
-                                <td>Цена сегодня</td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Батон нарезной</td>
-                                <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                                <td>7,5</td>
-                                <td>Х</td>
-                            </tr>
-                            <tr>
-                                <td>Молоко 2.5%</td>
-                                <td><input type="number" name="number" class="number" value="0" min="0"/></td>
-                                <td>23</td>
-                                <td>Х</td>
-                            </tr>
-                            <tr>
-                                <td>Мыло Шик</td>
-                                <td><input type="number" name="number" class="number" value="0" min="0" /></td>
-                                <td>10</td>
-                                <td>Х</td>
-                            </tr>
-                        </tbody>
-                </table>
-            </div>
 
         </div>
         </div>
@@ -202,20 +157,57 @@
                     </ul>
                 </div>
             </div>
-<<<<<<< HEAD
     </main>
 
-    <script type="text/javascript" src="templates.js"></script>
-=======
+
         </div>
         <div class="aside"></div>
     </div>
 </footer>
-    <!--<script type="text/javascript" src="templates.js"></script>-->
 
+
+    <script id="templates" type="text/template">
+        <% _.each(goods, function(good) { %>
+        <tr class="add-template-item" data-id="<%= good.id %>">
+            <!--<td><%= good.id %></td>-->
+            <td><%= good.name %></td>
+            <td>
+                 <span
+                         class="btn-dec-count change-count"
+                         title="Уменьшить на 1"
+                         data-id="<%= good.id %>"
+                         data-delta="-1"
+                 >
+                        <i class="fa fa-angle-down"></i>
+                    </span>
+                <span class="count"><%= good.count %></span>
+                <span
+                        class="btn-inc-count change-count"
+                        title="Увеличить на 1"
+                        data-id="<%= good.id %>"
+                        data-delta="1"
+                >
+                        <i class="fa fa-angle-up"></i>
+                    </span>
+            </td>
+            <td>
+                <%= good.price %> грн.
+            </td>
+            <td><span class="sum"><%= good.count * good.price %></span> грн.</td>
+            <td>
+                    <span class="btn-delete remove-form-template" title="Удалить из корзины" data-id="<%= good.id %>">
+                        <i class="fa fa-ban"></i>
+                    </span>
+            </td>
+        </tr>
+        <% }); %>
+    </script>
+
+    <script type="text/javascript " src="../underscore.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
+    <script type="text/javascript" src="../basket/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
->>>>>>> 0ca79ca45476420eadc6e4649b6acb235965fb67
 </body>
 </html>

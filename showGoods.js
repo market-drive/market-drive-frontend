@@ -32,13 +32,14 @@
     var clothesClick = document.getElementById('clothes');
     var result = document.getElementById('result');
 
-    var basketData = [] ; //корзина
+    var basketData = [] ;
+    var templateData = [];//корзина
     var milk,
         grocery,
         hotDrinks;
     var div = document.getElementById('result');
 
-
+var templates = localStorage.getItem('templates');
         $.getJSON('products.json', function (data) {
             for (var key in data) {
                 if (key === 'milk') {
@@ -54,18 +55,27 @@
             }
 
         var milkOut = "";
+
+
         function showMilk() {
+
                 for (var i = 0; i < milk.length; i++) {
                     milkOut += '<div id="goods-list">';
                     milkOut += '<img src="' + milk[i].imageUrl + '" width="200" height="150">'
                         + '<span class="name-basket">"' + milk[i].name + '"</span>'  + '<br>'
                         + '<span>"' + milk[i].brand + '"</span>' + '<br>'
                         + '<span class="price-basket">"ціна -"  '+ milk[i].price +'  грн "</span>' + '<br>';
-                    milkOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В корзину</button>';
+                    if(templates){
+                        milkOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В шаблоны</button>';
+                    }
+                    else{
+                        milkOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В корзину</button>';
+                    }
                     milkOut += '</div>';
                 }
                 $(result).html(milkOut);
             $('button.btn-add').on('click', clickBtn);
+            $('button.template-add').on('click', clickBtnTamplate);
         }
         $(milkClick).on('click', showMilk);
 
@@ -78,11 +88,17 @@
                 + '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>'
                 + '<span>"' + prod.brand + '"</span>' + '<br>'
                 + '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
-            groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            if(templates){
+                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
             groceryOut += '</div>';
         }
         $(result).html(groceryOut);
         $('button.btn-add').on('click', clickBtn);
+
     }
 
     showGrocery();
@@ -104,67 +120,102 @@
         $('button.btn-add').on('click', clickBtn);
     }
     $(hotDrinksClick).on('click', showHotDrinks);
+
         });
-
-
-    function getById(id) {
-        return _.findWhere(basketData, {id :id});
-    }
-
-        function updateData() {
-            basketData = JSON.parse(localStorage.getItem('basket')) || [];
-            return basketData;
-        }
-        //
-        //сохраняем данные в local storage
-        function saveData() {
-            localStorage.setItem('basket', JSON.stringify(basketData));
-            return basketData;
-        }
-        //
-        //
-        //
-        // var RES = document.querySelector('result');
-        // function addGoods() {
-        //     var basketData = updateData() || {},
-        //         parentBtn = this.parentNode,
-        //         itemId = this.getAttribute('data-id'),
-        //         itemName = document.getElementsByClassName('name-basket').innerHTML,
-        //         itemPrice = document.getElementsByClassName('price-basket').innerHTML;
-        //     if(basketData.hasOwnProperty(itemId)){
-        //         basketData[itemId][2] += 1;
-        //     } else{
-        //         basketData[itemId] =[itemName, itemPrice, 1];
-        //     }
-        // }
-
-            function add(item) {
-                var oldItem;
-                updateData();
-                oldItem = getById(item.id);
-                if (!oldItem) {
-                    basketData.push(item);
-                } else {
-                    oldItem.count = oldItem.count + item.count;
+                function byId(id) {
+                    return _.findWhere(templateData, {id :id});
                 }
-                saveData();
-                return item;
-           }
 
-        function clickBtn() {
-            $('#result').off('click', 'button');
-            $('#result').on('click', 'button', function () {
-                var $this = $(this);
-                add({
-                    id: +$this.data('id'),
-                    name: +$this.data('name'),
-                    price: +$this.data('price'),
-                    count: 1
-                });
-                alert('Товар добавлен в корзину');
-            });
+                function updateTemplate() {
+                    templateData = JSON.parse(localStorage.getItem(string)) || [];
+                    return templateData;
+                }
 
+                //сохраняем данные в local storage
+                function saveTemplate() {
+                    localStorage.setItem(string   , JSON.stringify(templateData));
+                    return templateData;
+                }
+
+                function addTemplate(item) {
+                    var oldItem;
+                    updateTemplate();
+                    oldItem = byId(item.id);
+                    if (!oldItem) {
+                        templateData.push(item);
+                    } else {
+                        oldItem.count = oldItem.count + item.count;
+                    }
+                    saveTemplate();
+                    return item;
+                }
+function clickBtnTamplate() {
+    $('#result').off('click', 'button');
+    $('#result').on('click', 'button', function () {
+        var $this = $(this);
+        addTemplate({
+            id: +$this.data('id'),
+            name: +$this.data('name'),
+            price: +$this.data('price'),
+            count: 1
+        });
+        if (templates){
+            alert('Товар добавлен в шаблоны');
+        } else{
+            alert('Товар добавлен в корзину');
         }
+    });
+}
+
+
+
+                function getById(id) {
+                    return _.findWhere(basketData, {id: id});
+                }
+
+                function updateData() {
+                    basketData = JSON.parse(localStorage.getItem('basket')) || [];
+                    return basketData;
+                }
+
+                //сохраняем данные в local storage
+                function saveData() {
+                    localStorage.setItem('basket', JSON.stringify(basketData));
+                    return basketData;
+                }
+
+                function add(item) {
+                    var oldItem;
+                    updateData();
+                    oldItem = getById(item.id);
+                    if (!oldItem) {
+                        basketData.push(item);
+                    } else {
+                        oldItem.count = oldItem.count + item.count;
+                    }
+                    saveData();
+                    return item;
+                }
+
+
+
+function clickBtn() {
+    $('#result').off('click', 'button');
+    $('#result').on('click', 'button', function () {
+        var $this = $(this);
+        add({
+            id: +$this.data('id'),
+            name: +$this.data('name'),
+            price: +$this.data('price'),
+            count: 1
+        });
+        if (templates){
+            alert('Товар добавлен в шаблоны');
+        } else{
+            alert('Товар добавлен в корзину');
+        }
+    });
+}
 
 
 

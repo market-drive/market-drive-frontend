@@ -8,16 +8,15 @@ var cart = (function ($) {
             showBasketOnInit: true,
             showMenuBasketOnInit: true
         });
-    // var optionsCatalog = _.extend({
-    //     showBasketOnInit: false,
-    //     showMenuBasketOnInit: true
-    // });
+    var optionsTemplate = _.extend({
+        showTemplateOnInit: false,
+        showMenuTemplateOnInit: true
+    });
 
     function init() {
-        // if (page === 'catalog') {
-        //     catalog.init();
-        //     cart.init(optionsCatalog)
-        // }
+        if (page === 'template') {
+            template.init(optionsTemplate);
+        }
         if (page === 'basket') {
             basket.init(optionsBasket);
         }

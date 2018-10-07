@@ -27,56 +27,9 @@
 
         //Навешивание событий
         function _bindHandlers() {
-            // clickAddBtn();
             clickChangeCountInBasket();
             clickRemoveFromBasket();
         }
-
-        // var milkClick = document.getElementById('milk');
-        // var result = document.getElementById('result');
-        //
-        //
-        // var milk;
-        // //var div = document.getElementById('result');
-        //
-        // $.getJSON('products.json', function (data) {
-        //
-        //
-        //
-        //     // BTN.setAttribute("id", "send-goods");
-        //     // '<button class="btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '" data-price="' + prod.price + '">В корзину</button>';
-        //     // '<button>' + BTN + '</button>';
-        //     for (var key in data) {
-        //         if (key === 'milk') {
-        //             milk = data[key];
-        //         }
-        //         else if (key === 'grocery') {
-        //         }
-        //     }
-        // });
-        // var milkOut = "";
-        // function showMilk() {
-        //
-        //     for (var prop in milk) {
-        //         var prod = milk[prop];
-        //         milkOut += '<div id="goods-list">';
-        //         milkOut += '<img src="' + prod.imageUrl + '" width="200" height="150">'
-        //             + '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>'
-        //             + '<span>"' + prod.brand + '"</span>' + '<br>'
-        //             + '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
-        //         milkOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '" data-price="' + prod.price + '">В корзину</button>';
-        //         milkOut += '</div>';
-        //     }
-        //     result.innerHTML = milkOut;
-        //     $('button').on('click', clickAddBtn);
-        //
-        // }
-        // $(milkClick).on('click', showMilk);
-        // //milkClick.addEventListener('click', showMilk);
-
-
-
-
 
         //получаем данные
         function updateData() {
@@ -93,8 +46,6 @@
             return basketData;
         }
 
-
-
         //очищаем данные
         function clearData() {
             basketData = [];
@@ -105,19 +56,7 @@
         function getById(id) {
             return _.findWhere(basketData, {id :id});
         }
-        //добаляем товар в корзину
-        // function add(item) {
-        //     var oldItem;
-        //     updateData();
-        //     oldItem = getById(item.id);
-        //     if (!oldItem) {
-        //         basketData.push(item);
-        //     } else {
-        //         oldItem.count = oldItem.count + item.count;
-        //     }
-        //     saveData();
-        //     return item;
-        // }
+
         //удаляем товар с корзины
         function remove(id) {
             updateData();
@@ -155,7 +94,7 @@
         //возвращаем общую сумму товаров
         function getSum() {
             return _.reduce(basketData, function (sum, item) {
-                return sum + item.count * item.price
+                return sum + item.count * item.price.toFixed(2);
             },0);
         }
 
@@ -186,34 +125,7 @@
             return $( '.add-basket-item' + '[' + 'data-id' + '="' + id + '"]');
         }
 
-        //Добавление в корзину
-       //  let elBasketItem = document.getElementById('basket-item');
-       //  let dataId = $(this).attr('data-id');
-       //  let dataName = $(this).attr('data-name');
-       //  let dataPrice = $(this).attr('data-price');
-       //  var Btn = document.getElementsByClassName('good');
-       //  var div = document.getElementById('result');
-       // // var click = document.querySelector('button');
-       //  var span1 = document.getElementsByClassName('name-basket');
-       //  var button = document.querySelector('btn-add');
-       //  var click = document.getElementsByClassName('send-goods');
-       //
-       //  function clickAddBtn() {
-       //      var section = document.getElementsByClassName('good');
-       //      var div = document.getElementById('result');
-       //
-       //      $(milkOut).on('click', function (e) {
-       //          var $this = $(this);
-       //          add({
-       //              id: +span1,
-       //              name: +$this.attr('data-name'),
-       //              price: +$this.attr('data-price'),
-       //              count: 1
-       //          });
-       //          showMenuBasket();
-       //          alert('Товар добавлен в корзину');
-       //      });
-       //  }
+
         //меняем количество товаров в корзине
         var change = document.getElementsByClassName('change-count');
         function clickChangeCountInBasket() {
@@ -225,7 +137,7 @@
                     basketItem = changeCount(id, delta);
                 if (basketItem.count) {
                     $basketElem.find('.count').html(basketItem.count);
-                    $basketElem.find('.sum').html(basketItem.count * basketItem.price);
+                    $basketElem.find('.sum').html(basketItem.count * basketItem.price.toFixed(2));
                 } else {
                     $basketElem.remove();
                 }

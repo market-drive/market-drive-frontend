@@ -265,25 +265,38 @@ thead {
   font-weight: normal;
 }
 
-.goods-list {
+#goods-list {
   position: relative;
   height: 300px;
-  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+  /*box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
+  /*-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
   margin: 10px 10px;
   text-align: center;
 }
 
-.send-goods {
+.btn-add {
   display: flex;
   justify-content: flex-start;
   background-color: #fff;
   border-radius: 20px;
-  width: 75px;
+  width: 90px;
   padding-left: 5px;
   position: absolute;
   bottom: 0;
   margin: 10px 10px;
+  padding-left: 10px;
+}
+.template-add{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 90px;
+  padding-left: 5px;
+  position: absolute;
+  bottom: 0;
+  margin: 10px 10px;
+  padding-left: 9px;
 }
 
 .send-goods:hover {
@@ -306,7 +319,7 @@ thead {
   color: #000;
   background-color: transparent;
   margin-bottom: 10px;
-  width: 160;
+  width: 160px;
 }
 
 .btn-main:hover {
