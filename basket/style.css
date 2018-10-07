@@ -1,0 +1,11 @@
+.btn-dec-count{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btn-inc-count{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn-delete{
+    cursor: pointer;
+}

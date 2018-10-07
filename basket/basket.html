@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="../Bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href=" ../templates/additionally_style.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../showGoods.js"></script>
+    <script type="text/javascript" src="basket.js"></script>
     <title>Market Drive</title>
 </head>
-<body>
+<body data-page="basket">
     <header>
         <div class="container-fluid">
             <div class="row justify-content-around">
@@ -48,7 +51,7 @@
                         <a href="../expenses/expenses.html">Затраты</a>
                     </li>
                     <li>
-                        <a href="basket.html">Корзина</a>
+                        <a href="basket.html">Корзина<span id="total-basket-count" class="badge"></span></a>
                     </li>
                 </ul>
             </nav>
@@ -59,32 +62,33 @@
         <table class="table col-6 offset-3">
                 <thead>
                     <tr>
-                        <td>Товар</td>
-                        <td>Кол-во</td>
-                        <td>Цена сегодня</td>
-                        <td></td>
+                        <th>Товар</th>
+                        <th>Кол-во</th>
+                        <th>Цена сегодня</th>
+                        <th>Сумма</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="goods-result">Батон нарезной</td>
-                        <td><input id="number1" type="number" name="number" class="number" value="0" min="0"/></td>
-                        <td class="price">7,5</td>
-                        <td>грн</td>
+                <tbody id="basket-item">
+                    <tr><td colspan="6"></td>
+                        <!--<td class="goods-result"></td>-->
+                        <!--<td><input id="number1" type="number" name="number" class="number" value="0" min="0"/></td>-->
+                        <!--<td class="price"></td>-->
+                        <!--<td>грн</td>-->
                     </tr>
-                    <tr>
-                        <td class="goods-result">Молоко 2.5%</td>
-                        <td><input id="number2" type="number" name="number" class="number" value="0" min="0"/></td>
-                        <td class="price">23</td>
-                        <td>грн</td>
-                    </tr>
-                    <tr>
-                        <td class="goods-result">Мыло Шик</td>
-                        <td><input id="number3" type="number" name="number" class="number" value="0" min="0" /></td>
-                        <td class="price">10</td>
-                        <td>грн</td>
-                    </tr>
+                    <!--<tr>-->
+                        <!--<td class="goods-result"></td>-->
+                        <!--<td><input id="number2" type="number" name="number" class="number" value="0" min="0"/></td>-->
+                        <!--<td class="price"></td>-->
+                        <!--<td>грн</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td class="goods-result"></td>-->
+                        <!--<td><input id="number3" type="number" name="number" class="number" value="0" min="0" /></td>-->
+                        <!--<td class="price"></td>-->
+                        <!--<td>грн</td>-->
+                    <!--</tr>-->
                 </tbody>
+            <th> Итого: <span id="total-basket-sum"></span>грн.</th>
         </table>
     </div>
         <div class="row">
@@ -104,6 +108,56 @@
         </div>
     </main>
 
-    <script type="text/javascript" src="basket.js"></script>
+
+
+    <script id="basket-template" type="text/template">
+        <% _.each(goods, function(good) { %>
+        <tr class="add-basket-item" data-id="<%= good.id %>">
+            <!--<td><%= good.id %></td>-->
+            <td><%= good.name %></td>
+            <td>
+                 <span
+                         class="btn-dec-count change-count"
+                         title="Уменьшить на 1"
+                         data-id="<%= good.id %>"
+                         data-delta="-1"
+                 >
+                        <i class="fa fa-angle-down"></i>
+                    </span>
+                <span class="count"><%= good.count %></span>
+                <span
+                        class="btn-inc-count change-count"
+                        title="Увеличить на 1"
+                        data-id="<%= good.id %>"
+                        data-delta="1"
+                >
+                        <i class="fa fa-angle-up"></i>
+                    </span>
+                </td>
+            <td>
+                <%= good.price %> грн.
+            </td>
+            <td><span class="sum"><%= good.count * good.price %></span> грн.</td>
+            <td>
+                    <span class="btn-delete remove-form-basket" title="Удалить из корзины" data-id="<%= good.id %>">
+                        <i class="fa fa-ban"></i>
+                    </span>
+            </td>
+        </tr>
+        <% }); %>
+    </script>
+
+
+
+    <!--<script type="text/html" src="/modules/jquery.min.js"></script>-->
+    <!--<script type="text/html" src="/modules/jquery.cookie.js"></script>-->
+    <script type="text/javascript" src="../underscore.js"></script>
+    <!--<script type="text/javascript" src="catalog.js"></script>-->
+    <!--<script type="text/javascript" src="basket.js"></script>-->
+    <script type="text/javascript" src="index.js"></script>
+    <!--<script type="text/javascript" src="../showGoods.js"></script>-->
+    <script type="text/javascript">
+
+    </script>
 </body>
 </html>

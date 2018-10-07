@@ -2,21 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb46eeb3-08e1-4d9c-9629-8fe1bf198370" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/templates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basket/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check in.html" beforeDir="false" afterPath="$PROJECT_DIR$/check in.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expenses/expenses-month.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-month.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expenses/expenses-own.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-own.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expenses/expenses-year.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expenses/expenses.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods.json" beforeDir="false" afterPath="$PROJECT_DIR$/goods.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/bin/npm-cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/bin/npm-cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-pack.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-pack.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-publish.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-publish.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-unpublish.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm-unpublish.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/cli/npm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/files/package.json.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/files/package.json.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-config.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-config.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-registry.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-registry.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-scripts.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/misc/npm-scripts.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/doc/spec/file-specifiers.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/doc/spec/file-specifiers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-access.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-adduser.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-adduser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-audit.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-audit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bin.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bugs.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bugs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-build.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-build.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bundle.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-bundle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-cache.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-cache.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ci.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ci.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-completion.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-completion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-config.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-dedupe.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-dedupe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-deprecate.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-deprecate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-dist-tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-dist-tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-docs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-explore.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-explore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-help-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-help-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-help.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-hook.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-hook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-init.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-init.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install-ci-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install-ci-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ls.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ls.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-outdated.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-outdated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-owner.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-owner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-pack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ping.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-ping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-prefix.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-prefix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-prune.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-prune.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-publish.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-publish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-rebuild.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-rebuild.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-repo.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-repo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-restart.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-restart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-root.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-root.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-run-script.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-run-script.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-shrinkwrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-shrinkwrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-star.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-star.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-stars.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-stars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-start.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-stop.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-stop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-team.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-token.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-token.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-uninstall.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-uninstall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-unpublish.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-unpublish.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-version.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-version.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-whoami.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm-whoami.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/cli/npm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-folders.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-folders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-json.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-json.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-package-locks.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-package-locks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-shrinkwrap.json.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npm-shrinkwrap.json.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npmrc.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/npmrc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/package-lock.json.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/package-lock.json.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/files/package.json.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/files/package.json.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-coding-style.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-coding-style.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-config.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-developers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-disputes.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-disputes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-orgs.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-orgs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-registry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-scope.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-scope.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/npm-scripts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/removing-npm.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/removing-npm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/semver.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/html/doc/misc/semver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/audit.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/audit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/config/defaults.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/config/defaults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/config/get-credentials-by-uri.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/config/get-credentials-by-uri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/config/pacote.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/config/pacote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/install.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/install.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/pack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/lib/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/lib/publish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-README.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-README.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-ls.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-ls.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-pack.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-pack.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-publish.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-publish.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-unpublish.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm-unpublish.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man1/npm.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man1/npm.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man5/npm-json.5" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man5/npm-json.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man5/package.json.5" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man5/package.json.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-config.7" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-config.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-registry.7" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-registry.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-scripts.7" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/man/man7/npm-scripts.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/npm/scripts/changelog.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/npm/scripts/changelog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/showGoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/showGoods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/additionally_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/additionally_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templates.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,59 +142,17 @@
       <file leaf-file-name="showGoods.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/showGoods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5292">
-              <caret line="324" column="9" selection-start-line="324" selection-start-column="9" selection-end-line="324" selection-end-column="9" />
+            <state relative-caret-position="1422">
+              <caret line="145" column="42" lean-forward="true" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basket/basket.js">
+      <file leaf-file-name="products.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/products.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="94" column="30" lean-forward="true" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-              <folding>
-                <marker date="1537192329770" expanded="true" signature="4089:4148" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basket.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basket/basket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-              <folding>
-                <marker date="1537188504530" expanded="true" signature="4232:4288" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templates.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/templates.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="60" column="17" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="60" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="additionally_style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/additionally_style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="23" selection-end-column="3" />
+            <state relative-caret-position="1530">
+              <caret line="154" column="11" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -96,17 +160,59 @@
       <file leaf-file-name="templates.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/templates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state relative-caret-position="396">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style.css">
+      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basket/basket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state relative-caret-position="2070">
+              <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basket/basket.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-630">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+              <folding>
+                <marker date="1538866540225" expanded="true" signature="4830:4858" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+              <folding>
+                <marker date="1538861382471" expanded="true" signature="5419:5479" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalog.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basket/catalog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basket/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="10" selection-start-line="10" selection-start-column="3" selection-end-line="13" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -136,24 +242,29 @@
         <option value="$PROJECT_DIR$/example.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package-lock.json" />
-        <option value="$PROJECT_DIR$/goods.json" />
-        <option value="$PROJECT_DIR$/products.json" />
         <option value="$PROJECT_DIR$/public/api/storage.json" />
-        <option value="$PROJECT_DIR$/validation.js" />
         <option value="$PROJECT_DIR$/check-in.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/loadGoods.js" />
         <option value="$PROJECT_DIR$/check in.html" />
+        <option value="$PROJECT_DIR$/templates/additionally_style.css" />
+        <option value="$PROJECT_DIR$/goods.json" />
+        <option value="$PROJECT_DIR$/modules/jquery.min.js" />
+        <option value="$PROJECT_DIR$/modules/underscore.min.js" />
+        <option value="$PROJECT_DIR$/basket/style.css" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/validation.js" />
+        <option value="$PROJECT_DIR$/templates/templates.html" />
+        <option value="$PROJECT_DIR$/basket/catalog.js" />
+        <option value="$PROJECT_DIR$/content.html" />
+        <option value="$PROJECT_DIR$/basket/index.js" />
         <option value="$PROJECT_DIR$/basket/basket.html" />
         <option value="$PROJECT_DIR$/basket/basket.js" />
+        <option value="$PROJECT_DIR$/products.json" />
         <option value="$PROJECT_DIR$/showGoods.js" />
         <option value="$PROJECT_DIR$/templates/templates.js" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/content.html" />
-        <option value="$PROJECT_DIR$/templates/additionally_style.css" />
-        <option value="$PROJECT_DIR$/templates/templates.html" />
       </list>
     </option>
   </component>
@@ -197,11 +308,6 @@
               <item name="Market drive" type="b2602c69:ProjectViewProjectNode" />
               <item name="Market drive" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Market drive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Market drive" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +341,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -380,12 +486,37 @@
       <workItem from="1537082881632" duration="4308000" />
       <workItem from="1537093663993" duration="4795000" />
       <workItem from="1537101550018" duration="20786000" />
-      <workItem from="1537164041989" duration="25930000" />
+      <workItem from="1537164041989" duration="27305000" />
+      <workItem from="1537276399280" duration="6438000" />
+      <workItem from="1537353752307" duration="2958000" />
+      <workItem from="1537357035928" duration="4161000" />
+      <workItem from="1537432936927" duration="12506000" />
+      <workItem from="1537459766611" duration="13174000" />
+      <workItem from="1537701635047" duration="1392000" />
+      <workItem from="1537789936732" duration="18869000" />
+      <workItem from="1537865864274" duration="45718000" />
+      <workItem from="1538069602345" duration="8077000" />
+      <workItem from="1538237716386" duration="11766000" />
+      <workItem from="1538250445563" duration="1268000" />
+      <workItem from="1538287059267" duration="19689000" />
+      <workItem from="1538316111276" duration="324000" />
+      <workItem from="1538316912442" duration="1712000" />
+      <workItem from="1538318811868" duration="1577000" />
+      <workItem from="1538415836142" duration="480000" />
+      <workItem from="1538735448511" duration="704000" />
+      <workItem from="1538754941385" duration="7000" />
+      <workItem from="1538778536157" duration="5230000" />
+      <workItem from="1538783807146" duration="1647000" />
+      <workItem from="1538786206548" duration="3926000" />
+      <workItem from="1538810178721" duration="596000" />
+      <workItem from="1538824311304" duration="344000" />
+      <workItem from="1538840155897" duration="15559000" />
+      <workItem from="1538871048344" duration="7346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494262000" />
+    <option name="totallyTimeSpent" value="681105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,7 +531,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915683" visible="true" weight="0.14136904" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49915683" visible="true" weight="0.11383928" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32715008" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3288364" />
@@ -446,7 +577,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -459,59 +590,17 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/templates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="324">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/basket/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nav-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/check-in.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/check in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="144">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -606,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/9.11.1/core-modules/net.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -641,41 +723,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loadGoods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -686,22 +737,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/check in.html">
+    <entry file="file://$PROJECT_DIR$/templates/additionally_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-start-column="2" selection-end-line="23" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/check-in.js">
+    <entry file="file://$PROJECT_DIR$/goods.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="9833">
+          <caret line="548" column="16" selection-start-line="548" selection-start-column="16" selection-end-line="548" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/expenses.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700">
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="1" column="917" lean-forward="true" selection-start-line="1" selection-start-column="917" selection-end-line="1" selection-end-column="917" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/underscore/underscore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/underscore.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/charts.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -710,72 +793,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation.js">
+    <entry file="file://$PROJECT_DIR$/expenses/expenses.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="-126">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basket/basket.html">
+    <entry file="file://$PROJECT_DIR$/check in.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-          <folding>
-            <marker date="1537188504530" expanded="true" signature="4232:4288" ph="..." />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content.html">
+    <entry file="file://$PROJECT_DIR$/check-in.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="94" column="30" lean-forward="true" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
-          <folding>
-            <marker date="1537192329770" expanded="true" signature="4089:4148" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/additionally_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="23" selection-end-column="3" />
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/templates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="60" column="17" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="621">
+          <caret line="108" column="88" selection-start-line="108" selection-start-column="88" selection-end-line="108" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basket/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basket/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="10" selection-start-line="10" selection-start-column="3" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basket/catalog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basket/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="2070">
+          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="154" column="11" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+          <folding>
+            <marker date="1538861382471" expanded="true" signature="5419:5479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basket/basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+          <folding>
+            <marker date="1538866540225" expanded="true" signature="4830:4858" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/showGoods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5292">
-          <caret line="324" column="9" selection-start-line="324" selection-start-column="9" selection-end-line="324" selection-end-column="9" />
+        <state relative-caret-position="1422">
+          <caret line="145" column="42" lean-forward="true" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
         </state>
       </provider>
     </entry>
