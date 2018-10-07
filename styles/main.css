@@ -23,6 +23,16 @@ button:focus {
   outline: 0;
 }
 
+/* registry */
+.logo-registry {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  margin-top: 20px;
+}
+
 /* header */
 header {
   width: 100%;
