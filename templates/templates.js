@@ -1,6 +1,7 @@
- string = [] ;
+
 var template = (function ($) {
 
+    var string ;
 var btn = document.getElementById('create');
 var res = document.getElementById('template');
 
@@ -8,6 +9,7 @@ var res = document.getElementById('template');
 
 var nameList = document.createElement('span');
 function listCreate() {
+    var string;
     var tr = document.createElement('tr');
     var td = document.createElement('td');
 
@@ -44,8 +46,8 @@ function listCreate() {
 
     function initOptions(options) {
         var defaultOptions = {
-            showTemplateOnInit: true,    //показывать ли корзину при инициализации
-            showMenuTemplateOnInit: true //показывать и коичество товаров в меню
+            showTemplateOnInit: true,    //показывать ли шаблоны при инициализации
+            showMenuTemplateOnInit: true //показывать и количество товаров в меню
         };
         _.defaults(options || {}, defaultOptions);
         opts = _.clone(options);
@@ -67,7 +69,7 @@ function listCreate() {
         return templateData;
     }
     //сохраняем данные в local storage
-    function saveData() {
+    function updateTemplate() {
         localStorage.setItem(string, JSON.stringify(templateData));
         return templateData;
     }
@@ -75,11 +77,11 @@ function listCreate() {
     //очищаем данные
     function clearData() {
         templateData = [];
-        saveData();
+        updateTemplate();
         return templateData;
     }
-    //поиск объекта в basketData по id
-    function getById(id) {
+    //поиск объекта в templateData по id
+    function byId(id) {
         return _.findWhere(templateData, {id :id});
     }
 
@@ -89,14 +91,14 @@ function listCreate() {
         templateData = _.reject(templateData, function (item) {
             return item.id === id;
         });
-        saveData();
+        updateTemplate();
         return templateData;
     }
     //изменение количества товара в корзине
     function  changeCount (id, delta) {
         var item;
         updateData();
-        item = getById(id);
+        item = byId(id);
         if (item) {
             item.count = item.count + delta;
             if (item.count < 1) {
@@ -120,11 +122,11 @@ function listCreate() {
     //возвращаем общую сумму товаров
     function getSum() {
         return _.reduce(templateData, function (sum, item) {
-            return sum + item.count * item.price.toFixed(2);
+            return sum + item.count * item.price;
         },0);
     }
 
-    //вывод корзины
+    //вывод шаблона
     function showTemplate() {
         var template = _.template($('#templates').html()),
             data = {
@@ -136,10 +138,10 @@ function listCreate() {
 
     //Показ общей суммы товаров в корзине
     function totalTemplateSum() {
-        $('#total-basket-sum').html(getSum());
+        $('#total-template-sum').html(getSum());
     }
 
-    //Поик товара в корзине по id
+    //Поик товара в шаблонах по id
     function findTemplateId(id) {
         return $( '.add-template-item' + '[' + 'data-id' + '="' + id + '"]');
     }
@@ -153,10 +155,10 @@ function listCreate() {
                 id = +$this.attr('data-id'),
                 delta = +$this.attr('data-delta'),
                 $basketElem = findTemplateId(id),
-                basketItem = changeCount(id, delta);
-            if (basketItem.count) {
-                $basketElem.find('.count').html(basketItem.count);
-                $basketElem.find('.sum').html(basketItem.count * basketItem.price.toFixed(2));
+                templateItem = changeCount(id, delta);
+            if (templateItem.count) {
+                $basketElem.find('.count').html(templateItem.count);
+                $basketElem.find('.sum').html(templateItem.count * templateItem.price);
             } else {
                 $basketElem.remove();
             }
@@ -182,9 +184,9 @@ function listCreate() {
         init: init,
         update: updateData,
         getData: getData,
-        save: saveData,
+        save: updateTemplate,
         clearData: clearData,
-        getById: getById,
+        byId: byId,
         remove: remove,
         changeCount: changeCount,
         getCount: getCount,

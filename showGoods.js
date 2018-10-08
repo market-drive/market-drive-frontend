@@ -1,4 +1,4 @@
-'use strict';
+
 
     $(document).ready(function () {
         $("#menu ul").hide();
@@ -15,7 +15,7 @@
         // При нажатии на название категории выдвигается список. Когда происходит нажатие на другую категорию,
         // предыдущая закрывается.
 
-        var milkClick = document.getElementById('milk');
+    var milkClick = document.getElementById('milk');
     var groceryClick = document.getElementById('grocery');
     var hotDrinksClick = document.getElementById('hotDrinks');
     var meatClick = document.getElementById('meat');
@@ -33,10 +33,24 @@
     var result = document.getElementById('result');
 
     var basketData = [] ;
-    var templateData = [];//корзина
+    var templateData = [];
+    var string;
+    var nameList;
     var milk,
         grocery,
-        hotDrinks;
+        hotDrinks,
+        meat,
+        fish,
+        snacks,
+        drink,
+        sauce,
+        frozen,
+        sweets,
+        foodAnimals,
+        toiletAnimals,
+        care,
+        goodsHome,
+        clothes;
     var div = document.getElementById('result');
 
 var templates = localStorage.getItem('templates');
@@ -51,9 +65,44 @@ var templates = localStorage.getItem('templates');
                 else if (key === 'hotDrinks'){
                     hotDrinks = data[key];
                 }
+                else if (key === 'meat'){
+                    meat = data[key];
+                }
+                else if (key === 'fish'){
+                    fish = data[key];
+                }
+                else if (key === 'snacks'){
+                    snacks = data[key];
+                }
+                else if (key === 'drink'){
+                    drink = data[key];
+                }
+                else if (key === 'sauce'){
+                    sauce = data[key];
+                }
+                else if (key === 'frozen'){
+                    frozen = data[key];
+                }
+                else if (key === 'sweets'){
+                    sweets = data[key];
+                }
+                else if (key === 'foodAnimals'){
+                    foodAnimals = data[key];
+                }
+                else if (key === 'toiletAnimals'){
+                    toiletAnimals = data[key];
+                }
+                else if (key === 'care'){
+                    care = data[key];
+                }
+                else if (key === 'goodsHome'){
+                    goodsHome = data[key];
+                }
+                else if (key === 'clothes'){
+                    clothes = data[key];
+                }
 
             }
-
         var milkOut = "";
 
 
@@ -75,7 +124,7 @@ var templates = localStorage.getItem('templates');
                 }
                 $(result).html(milkOut);
             $('button.btn-add').on('click', clickBtn);
-            $('button.template-add').on('click', clickBtnTamplate);
+            $('button.template-add').on('click', clickBtnTemplate);
         }
         $(milkClick).on('click', showMilk);
 
@@ -84,23 +133,23 @@ var templates = localStorage.getItem('templates');
         for (var prop in grocery) {
             var prod = grocery[prop];
             groceryOut += '<div id="goods-list">';
-            groceryOut += '<img src="' + prod.imageUrl + '" width="200" height="150">'
-                + '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>'
-                + '<span>"' + prod.brand + '"</span>' + '<br>'
-                + '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            groceryOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            groceryOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            groceryOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            groceryOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
             if(templates){
-                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+                groceryOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.brand + '"  data-price="' + prod.price + '">В шаблоны</button>';
             }
             else{
-                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.brand + '"  data-price="' + prod.price + '">В корзину</button>';
             }
             groceryOut += '</div>';
         }
         $(result).html(groceryOut);
+        $('button.template-add').on('click', clickBtnTemplate);
         $('button.btn-add').on('click', clickBtn);
 
     }
-
     showGrocery();
     $(groceryClick).on('click', showGrocery);
 
@@ -121,8 +170,289 @@ var templates = localStorage.getItem('templates');
     }
     $(hotDrinksClick).on('click', showHotDrinks);
 
+
+
+    var meatOut = "";
+    function showMeat() {
+        for (var prop in meat) {
+            var prod = meat[prop];
+            meatOut += '<div id="goods-list">';
+            meatOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            meatOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            meatOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            meatOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                meatOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                meatOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            meatOut += '</div>';
+        }
+        $(result).html(meatOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(meatClick).on('click', showMeat);
+
+    var fishOut = "";
+    function showFish() {
+        for (var prop in fish) {
+            var prod = fish[prop];
+            fishOut += '<div id="goods-list">';
+            fishOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            fishOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            fishOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            fishOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                fishOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                fishOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            fishOut += '</div>';
+        }
+        $(result).html(fishOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(fishClick).on('click', showFish);
+
+    var snacksOut = "";
+    function showSnacks() {
+        for (var prop in snacks) {
+            var prod = snacks[prop];
+            snacksOut += '<div id="goods-list">';
+            snacksOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            snacksOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            snacksOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            snacksOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                snacksOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                snacksOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            snacksOut += '</div>';
+        }
+        $(result).html(snacksOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(snacksClick).on('click', showSnacks);
+
+
+    var drinkOut = "";
+    function showDrink() {
+        for (var prop in drink) {
+            var prod = drink[prop];
+            drinkOut += '<div id="goods-list">';
+            drinkOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            drinkOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            drinkOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            drinkOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                drinkOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                drinkOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            drinkOut += '</div>';
+        }
+        $(result).html(drinkOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(drinkClick).on('click', showDrink);
+
+    var sauceOut = "";
+    function showSauce() {
+        for (var prop in sauce) {
+            var prod = sauce[prop];
+            sauceOut += '<div id="goods-list">';
+            sauceOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            sauceOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            sauceOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            sauceOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                sauceOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                sauceOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            sauceOut += '</div>';
+        }
+        $(result).html(sauceOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(sauceClick).on('click', showSauce);
+
+    var frozenOut = "";
+    function showFrozen() {
+        for (var prop in frozen) {
+            var prod = frozen[prop];
+            frozenOut += '<div id="goods-list">';
+            frozenOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            frozenOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            frozenOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            frozenOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                frozenOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                frozenOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            frozenOut += '</div>';
+        }
+        $(result).html(frozenOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(frozenClick).on('click', showFrozen);
+
+    var sweetsOut = "";
+    function showSweets() {
+        for (var prop in sweets) {
+            var prod = sweets[prop];
+            sweetsOut += '<div id="goods-list">';
+            sweetsOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            sweetsOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            sweetsOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            sweetsOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                sweetsOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                sweetsOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            sweetsOut += '</div>';
+        }
+        $(result).html(sweetsOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(sweetsClick).on('click', showSweets);
+
+    var foodAnimalsOut = "";
+    function showFoodAnimals() {
+        for (var prop in foodAnimals) {
+            var prod = foodAnimals[prop];
+            foodAnimalsOut += '<div id="goods-list">';
+            foodAnimalsOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            foodAnimalsOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            foodAnimalsOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            foodAnimalsOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                foodAnimalsOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                foodAnimalsOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            foodAnimalsOut += '</div>';
+        }
+        $(result).html(foodAnimalsOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(foodAnimalsClick).on('click', showFoodAnimals);
+
+    var toiletAnimalsOut = "";
+    function showToiletAnimals() {
+        for (var prop in toiletAnimals) {
+            var prod = toiletAnimals[prop];
+            toiletAnimalsOut += '<div id="goods-list">';
+            toiletAnimalsOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            toiletAnimalsOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            toiletAnimalsOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            toiletAnimalsOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                toiletAnimalsOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                toiletAnimalsOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            toiletAnimalsOut += '</div>';
+        }
+        $(result).html(toiletAnimalsOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(toiletAnimalsClick).on('click', showToiletAnimals);
+
+    var careOut = "";
+    function showCare() {
+        for (var prop in care) {
+            var prod = care[prop];
+            careOut += '<div id="goods-list">';
+            careOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            careOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            careOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            careOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                careOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                careOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            careOut += '</div>';
+        }
+        $(result).html(careOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(careClick).on('click', showCare);
+
+    var goodsHomeOut = "";
+    function showGoodsHome() {
+        for (var prop in goodsHome) {
+            var prod = goodsHome[prop];
+            goodsHomeOut += '<div id="goods-list">';
+            goodsHomeOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            goodsHomeOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            goodsHomeOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            goodsHomeOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                goodsHomeOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                goodsHomeOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            goodsHomeOut += '</div>';
+        }
+        $(result).html(goodsHomeOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(goodsHomeClick).on('click', showGoodsHome);
+
+    var clothesOut = "";
+    function showClothes () {
+        for (var prop in clothes) {
+            var prod = clothes[prop];
+            clothesOut += '<div id="goods-list">';
+            clothesOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            clothesOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            clothesOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            clothesOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                clothesOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                clothesOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
+            clothesOut += '</div>';
+        }
+        $(result).html(clothesOut);
+        $('button.template-add').on('click', clickBtnTemplate);
+        $('button.btn-add').on('click', clickBtn);
+    }
+    $(clothesClick).on('click', showClothes);
         });
-                function byId(id) {
+
+            //функции добавление товаров в корзину и шаблоны
+
+            function byId(id) {
                     return _.findWhere(templateData, {id :id});
                 }
 
@@ -133,7 +463,7 @@ var templates = localStorage.getItem('templates');
 
                 //сохраняем данные в local storage
                 function saveTemplate() {
-                    localStorage.setItem(string   , JSON.stringify(templateData));
+                    localStorage.setItem(string , JSON.stringify(templateData));
                     return templateData;
                 }
 
@@ -149,7 +479,7 @@ var templates = localStorage.getItem('templates');
                     saveTemplate();
                     return item;
                 }
-function clickBtnTamplate() {
+function clickBtnTemplate() {
     $('#result').off('click', 'button');
     $('#result').on('click', 'button', function () {
         var $this = $(this);
@@ -159,11 +489,7 @@ function clickBtnTamplate() {
             price: +$this.data('price'),
             count: 1
         });
-        if (templates){
             alert('Товар добавлен в шаблоны');
-        } else{
-            alert('Товар добавлен в корзину');
-        }
     });
 }
 
@@ -209,371 +535,6 @@ function clickBtn() {
             price: +$this.data('price'),
             count: 1
         });
-        if (templates){
-            alert('Товар добавлен в шаблоны');
-        } else{
             alert('Товар добавлен в корзину');
-        }
     });
 }
-
-
-
-    // function showCatalog() {
-    //     var template = $('#catalog-template').html();
-    //
-    //     var $goods = $('#result');
-    //     $.getJSON('products.json', function (data) {
-    //         let res;
-    //         for (let key in data) {
-    //             if (key === 'milk') {
-    //                 res = data[key];
-    //             }
-    //         }
-    //         $goods.html(template({goods: res}));
-    //         //$goods.html({goods: res});
-    //     });
-    // }
-    // function createTable(goods) {
-    //     let result = document.getElementById('basket-item');
-    //     let tr = document.createElement('tr');
-    //     let td1 = document.createElement('td');
-    //     let td2 = document.createElement('td');
-    //     let td3 = document.createElement('td');
-    //     let td4 = document.createElement('td');
-    //     let td5 = document.createElement('td');
-    //     let span = document.createElement('span');
-    //     $(tr).addClass('add-basket-item');
-    //
-    //     let str = "";
-    //     for (var i = 0; i < length; i++) {
-    //         td1 += name;
-    //         td2 += price;
-    //         td3 += '<span class="change-count" title="уменьшить на 1" data-id="' + id + '" data-delta="-1"><i class="fa fa-angle-down"></i></span>' +
-    //             '<span class="count">"' + count + '"</span>' +
-    //             '<span class="change-count" title="увеличить на 1" data-id="' + id + '" data-delta="1"><i class="fa fa-angle-up"></i></span>';
-    //         td4 += '<span class="sum">"' + count*price + '"</span>' + "грн.";
-    //         td5 += '<span class="remove-form-basket" data-id="' + id + '"><i class="fa fa-ban"></i></span>';
-    //
-    //
-    //
-    //
-    //         tr.appendChild(td1);
-    //         tr.appendChild(td2);
-    //         tr.appendChild(td3);
-    //         tr.appendChild(td4);
-    //         tr.appendChild(td5);
-    //
-    //         result.appendChild(tr);
-    //     }
-    // }
-    //
-    // function addToBasket() {
-    //     var storage = $(this).attr('data-name');
-    //     if (basket[storage] !== undefined) {
-    //         basket[storage] ++;
-    //     } else  {
-    //         basket[storage] = 1;
-    //     }
-    //     console.log(basket);
-    // }
-
-
-
-
-    //      let arrStorage;
-    //      for (key in data) {
-    //          arrStorage = data[key];
-    //      }
-    //      arrStorage.forEach(function (item) {
-    //          for (key in item) {
-    //
-    //              if (key === 'milk') {
-    //                  let milk = item[key];
-    //                  let outMilk = "";
-    //
-    //                  function milkShow() {
-    //                      for (let i = 0; i < milk.length; i++) {
-    //                          outMilk += '<div class="goods-list">';
-    //                          outMilk += '<img src="' + milk[i].imageUrl + '" width="200" height="150">' + milk[i].name + '<br>' + milk[i].brand + '<br>' + "ціна - " + milk[i].price + " грн" + '<br>';
-    //                          outMilk += '<button class="send-goods" data-art="' + milk[i].name + '">В корзину</button>';
-    //                          outMilk += '</div>';
-    //                      }
-    //                      result.innerHTML = outMilk;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //                  milkClick.addEventListener('click', milkShow);
-    //              }
-    //              else if (key === 'grocery') {
-    //                  let grocery = item[key];
-    //                  let outGrocery = "";
-    //
-    //                  function groceryShow() {
-    //                      for (let j = 0; j < grocery.length; j++) {
-    //                          outGrocery += '<div class="goods-list">';
-    //                          outGrocery += '<img src="' + grocery[j].imageUrl + '" width="200" height="150">' + '<br>' + grocery[j].name + '<br>' + grocery[j].brand + '<br>' + "ціна - " + grocery[j].price + " грн" + '<br>';
-    //                          outGrocery += '<button class="send-goods" data-art="' + grocery[j].name + '" type="submit">В корзину</button>';
-    //                          outGrocery += '</div>';
-    //                      }
-    //                      result.innerHTML = outGrocery;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //                  groceryShow();
-    //                  groceryClick.addEventListener('click', groceryShow);
-    //              }
-    //              else if (key === 'hotDrinks') {
-    //                  let hotDrinks = item[key];
-    //                  let outHotDrinks = "";
-    //
-    //                  function hotDrinksShow() {
-    //                      for (let i = 0; i < hotDrinks.length; i++) {
-    //                          outHotDrinks += '<div class="goods-list">';
-    //                          outHotDrinks += '<img src="' + hotDrinks[i].imageUrl + '" width="200" height="150">' + '<br>' + hotDrinks[i].name + '<br>' + hotDrinks[i].brand + '<br>' + "ціна - " + hotDrinks[i].price + " грн" + '<br>';
-    //                          outHotDrinks += '<button class="send-goods" data-art="' + hotDrinks[i].name + '" type="submit">В корзину</button>';
-    //                          outHotDrinks += '</div>';
-    //                      }
-    //                      result.innerHTML = outHotDrinks;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  hotDrinksClick.addEventListener('click', hotDrinksShow);
-    //              }
-    //              else if (key === 'meat') {
-    //                  let meat = item[key];
-    //                  let outMeat = "";
-    //
-    //                  function meatShow() {
-    //                      for (let i = 0; i < meat.length; i++) {
-    //                          outMeat += '<div class="goods-list">';
-    //                          outMeat += '<img src="' + meat[i].imageUrl + '" width="200" height="150">' + '<br>' + meat[i].name + '<br>' + meat[i].brand + '<br>' + "ціна - " + meat[i].price + " грн" + '<br>';
-    //                          outMeat += '<button class="send-goods" data-art="' + meat[i].name + '" type="submit">В корзину</button>';
-    //                          outMeat += '</div>'
-    //                      }
-    //                      result.innerHTML = outMeat;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  meatClick.addEventListener('click', meatShow);
-    //              }
-    //              else if (key === 'fish') {
-    //                  let fish = item[key];
-    //                  let outFish = "";
-    //
-    //                  function fishShow() {
-    //                      for (let i = 0; i < fish.length; i++) {
-    //                          outFish += '<div class="goods-list">';
-    //                          outFish += '<img src="' + fish[i].imageUrl + '" width="200" height="150">' + '<br>' + fish[i].name + '<br>' + fish[i].brand + '<br>' + "ціна - " + fish[i].price + " грн" + '<br>';
-    //                          outFish += '<button class="send-goods" data-art="' + fish[i].name + '" type="submit">В корзину</button>';
-    //                          outFish += '</div>';
-    //                      }
-    //                      result.innerHTML = outFish;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  fishClick.addEventListener('click', fishShow);
-    //              }
-    //              else if (key === 'snacks') {
-    //                  let snacks = item[key];
-    //                  let outSnacks = "";
-    //
-    //                  function snacksShow() {
-    //                      for (let i = 0; i < snacks.length; i++) {
-    //                          outSnacks += '<div class="goods-list">';
-    //                          outSnacks += '<img src="' + snacks[i].imageUrl + '" width="200" height="150">' + '<br>' + snacks[i].name + '<br>' + snacks[i].brand + '<br>' + "ціна - " + snacks[i].price + " грн" + '<br>';
-    //                          outSnacks += '<button class="send-goods" data-art="' + snacks[i].name + '" type="submit">В корзину</button>';
-    //                          outSnacks += '</div>';
-    //                      }
-    //                      result.innerHTML = outSnacks;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  snacksClick.addEventListener('click', snacksShow);
-    //              }
-    //              else if (key === 'drink') {
-    //                  let drink = item[key];
-    //                  let outDrink = "";
-    //
-    //                  function drinkShow() {
-    //                      for (let i = 0; i < drink.length; i++) {
-    //                          outDrink += '<div class="goods-list">';
-    //                          outDrink += '<img src="' + drink[i].imageUrl + '" width="200" height="150">' + '<br>' + drink[i].name + '<br>' + drink[i].brand + '<br>' + "ціна - " + drink[i].price + " грн" + '<br>';
-    //                          outDrink += '<button class="send-goods" data-art="' + drink[i].name + '" type="submit">В корзину</button>';
-    //                          outDrink += '</div>';
-    //                      }
-    //                      result.innerHTML = outDrink;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  drinkClick.addEventListener('click', drinkShow);
-    //              }
-    //              else if (key === 'sauce') {
-    //                  let sauce = item[key];
-    //                  let outSauce = "";
-    //
-    //                  function sauceShow() {
-    //                      for (let i = 0; i < sauce.length; i++) {
-    //                          outSauce += '<div class="goods-list">';
-    //                          outSauce += '<img src="' + sauce[i].imageUrl + '" width="200" height="150">' + '<br>' + sauce[i].name + '<br>' + sauce[i].brand + '<br>' + "ціна - " + sauce[i].price + " грн" + '<br>';
-    //                          outSauce += '<button class="send-goods" data-art="' + sauce[i].name + '" type="submit">В корзину</button>';
-    //                          outSauce += '</div>';
-    //                      }
-    //                      result.innerHTML = outSauce;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  sauceClick.addEventListener('click', sauceShow);
-    //              }
-    //              else if (key === 'frozen') {
-    //                  let frozen = item[key];
-    //                  let outFrozen = "";
-    //
-    //                  function frozenShow() {
-    //                      for (let i = 0; i < frozen.length; i++) {
-    //                          outFrozen += '<div class="goods-list">';
-    //                          outFrozen += '<img src="' + frozen[i].imageUrl + '" width="200" height="150">' + '<br>' + frozen[i].name + '<br>' + frozen[i].brand + '<br>' + "ціна - " + frozen[i].price + " грн" + '<br>';
-    //                          outFrozen += '<button class="send-goods" data-art="' + frozen[i].name + '" type="submit">В корзину</button>';
-    //                          outFrozen += '</div>';
-    //                      }
-    //                      result.innerHTML = outFrozen;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  frozenClick.addEventListener('click', frozenShow);
-    //              }
-    //              else if (key === 'sweets') {
-    //                  let sweets = item[key];
-    //                  let outSweets = "";
-    //
-    //                  function sweetsShow() {
-    //                      for (let i = 0; i < sweets.length; i++) {
-    //                          outSweets += '<div class="goods-list">';
-    //                          outSweets += '<img src="' + sweets[i].imageUrl + '" width="200" height="150">' + '<br>' + sweets[i].name + '<br>' + sweets[i].brand + '<br>' + "ціна - " + sweets[i].price + " грн" + '<br>';
-    //                          outSweets += '<button class="send-goods" data-art="' + sweets[i].name + '" type="submit">В корзину</button>';
-    //                          outSweets += '</div>';
-    //                      }
-    //                      result.innerHTML = outSweets;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //                  sweetsClick.addEventListener('click', sweetsShow);
-    //              }
-    //              else if (key === 'foodAnimals') {
-    //                  let foodAnimals = item[key];
-    //                  let outFoodAnimals = "";
-    //
-    //                  function foodAnimalsShow() {
-    //                      for (let i = 0; i < foodAnimals.length; i++) {
-    //                          outFoodAnimals += '<div class="goods-list">';
-    //                          outFoodAnimals += '<img src="' + foodAnimals[i].imageUrl + '" width="200" height="150">' + '<br>' + foodAnimals[i].name + '<br>' + foodAnimals[i].brand + '<br>' + "ціна - " + foodAnimals[i].price + " грн" + '<br>';
-    //                          outFoodAnimals += '<button class="send-goods" data-art="' + foodAnimals[i].name + '" type="submit">В корзину</button>';
-    //                          outFoodAnimals += '</div>';
-    //                      }
-    //                      result.innerHTML = outFoodAnimals;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  foodAnimalsClick.addEventListener('click', foodAnimalsShow);
-    //              }
-    //              else if (key === 'toiletAnimals') {
-    //                  let toiletAnimals = item[key];
-    //                  let outToiletAnimals = "";
-    //
-    //                  function toiletAnimalsShow() {
-    //                      for (let i = 0; i < toiletAnimals.length; i++) {
-    //                          outToiletAnimals += '<div class="goods-list">';
-    //                          outToiletAnimals += '<img src="' + toiletAnimals[i].imageUrl + '" width="200" height="150">' + '<br>' + toiletAnimals[i].name + '<br>' + toiletAnimals[i].brand + '<br>' + "ціна - " + toiletAnimals[i].price + " грн" + '<br>';
-    //                          outToiletAnimals += '<button class="send-goods" data-art="' + toiletAnimals[i].name + '" type="submit">В корзину</button>';
-    //                          outToiletAnimals += '</div>';
-    //                      }
-    //                      result.innerHTML = outToiletAnimals;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  toiletAnimalsClick.addEventListener('click', toiletAnimalsShow);
-    //              }
-    //              else if (key === 'care') {
-    //                  let care = item[key];
-    //                  let outCare = "";
-    //
-    //                  function careShow() {
-    //                      for (let i = 0; i < care.length; i++) {
-    //                          outCare += '<div class="goods-list">';
-    //                          outCare += '<img src="' + care[i].imageUrl + '" width="200" height="150">' + '<br>' + care[i].name + '<br>' + care[i].brand + '<br>' + "ціна - " + care[i].price + " грн" + '<br>';
-    //                          outCare += '<button class="send-goods" data-art="' + care[i].name + '" type="submit">В корзину</button>';
-    //                          outCare += '</div>';
-    //                      }
-    //                      result.innerHTML = outCare;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  careClick.addEventListener('click', careShow);
-    //              }
-    //              else if (key === 'goodsHome') {
-    //                  let goodsHome = item[key];
-    //                  let outGoodsHome = "";
-    //
-    //                  function goodsHomeShow() {
-    //                      for (let i = 0; i < goodsHome.length; i++) {
-    //                          outGoodsHome += '<div class="goods-list">';
-    //                          outGoodsHome += '<img src="' + goodsHome[i].imageUrl + '" width="200" height="150">' + '<br>' + goodsHome[i].name + '<br>' + goodsHome[i].brand + '<br>' + "ціна - " + goodsHome[i].price + " грн" + '<br>';
-    //                          outGoodsHome += '<button class="send-goods" data-art="' + goodsHome[i].name + '" type="submit">В корзину</button>';
-    //                          outGoodsHome += '</div>';
-    //                      }
-    //                      result.innerHTML = outGoodsHome;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //
-    //                  goodsHomeClick.addEventListener('click', goodsHomeShow);
-    //              }
-    //              else if (key === 'clothes') {
-    //                  let clothes = item[key];
-    //                  let outClothes = "";
-    //                  function clothesShow() {
-    //                      for (let i = 0; i < clothes.length; i++) {
-    //                          outClothes += '<div class="goods-list">';
-    //                          outClothes += '<img src="' + clothes[i].imageUrl + '" width="200" height="150">' + '<br>' + clothes[i].name + '<br>' + clothes[i].brand + '<br>' + "ціна - " + clothes[i].price + " грн" + '<br>';
-    //                          outClothes += '<button class="send-goods" data-art="' + clothes[i].name + '" type="submit">В корзину</button>';
-    //                          outClothes += '<button class="plus" data-art="'+ clothes[i].name +'">+</button>';
-    //                          outClothes += '</div>';
-    //                      }
-    //                      result.innerHTML = outClothes;
-    //                      $('button.send-goods').on('click', addToBasket);
-    //                  }
-    //              }
-    //              clothesClick.addEventListener('click', clothesShow);
-    //          }
-    //      });
-    //
-    //  });
-    //
-    //
-    // // добавление товара в корзину
-    //  function addToBasket() {
-    //      let storage = $(this).attr('data-art');
-    //
-    //
-    //      if (basket[storage] !== undefined) {
-    //          basket[storage] ++;
-    //      } else  {
-    //          basket[storage] = 1;
-    //      }
-    //      localStorage.setItem('basket', JSON.stringify(basket));
-    //      //console.log(basket);
-    //      //showBasket();
-    //  }
-    //  addToBasket();
-    //
-
-    // function showBasket() {
-    // содержимое корзины
-    //     let out = "";
-    //     for (var s in basket) {
-    //         out += s + basket[s] + '<br>';
-    //     }
-    //         rez.innerHTML = out;
-    // }
-    // showBasket();
-
-
-
-
-
