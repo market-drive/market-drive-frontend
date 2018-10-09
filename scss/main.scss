@@ -32,6 +32,11 @@ button:focus {
 
 }
 
+.user-name {
+    color: #3cabfe;
+    margin-top: 0;
+}
+
 /* registry */
 
 .white-background {
@@ -121,7 +126,7 @@ header {
     }
 
     form {
-        margin-left: 135px;
+        margin-left: 100px;
 
         .input-search {
             width: 135px;
@@ -146,7 +151,7 @@ header {
             border-radius: 50px;
             background-color: #f1f1f1;
             color:#000;
-            margin-left: 20px;
+            //margin-left: 20px;
             margin-top: 10px;
             width: 75px;
         }
@@ -160,7 +165,7 @@ header {
     .exit {
         margin-bottom: 10px;
         margin-top: 5px;
-        margin-left: 80px;
+        margin-left: 20px;
         width: 70px;
         height: 25px;
 
@@ -171,6 +176,18 @@ header {
             text-decoration: none;
             padding: 0 20px;
             text-align: center;
+
+            a {
+                color: #3cabfe;
+                text-decoration: none;
+
+            }
+
+            a:hover {
+                color: #fff;
+                text-decoration: none;
+
+            }
         }
 
         .exit-link:hover {
@@ -212,6 +229,7 @@ header {
  ul {
      margin-bottom: -5rem;
  }
+
 
 /*content*/
 
@@ -573,6 +591,10 @@ footer {
         display: none;
         }
 
+        .user-name {
+            margin-top: -50px;
+        }
+
     .fa-search {
     position: relative;
     left: 170px;
@@ -647,13 +669,8 @@ footer {
         form {
             margin-top: 10px;
             margin-left: 5px;
-            margin-right: 120px;
         }
 
-        .exit {
-            margin-left: 40px;
-        
-    }
 
     .button-search {
         display: none;
