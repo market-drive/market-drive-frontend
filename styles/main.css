@@ -32,7 +32,8 @@ button:focus {
 
 .user-name {
   color: #3cabfe;
-  margin-top: 0;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
 /* registry */
@@ -108,7 +109,7 @@ header .logo img {
   height: 100%;
 }
 header form {
-  margin-left: 100px;
+  margin-left: 60px;
 }
 header form .input-search {
   width: 135px;

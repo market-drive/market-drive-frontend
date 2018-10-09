@@ -56,12 +56,10 @@ function loginRequest () {
         request.send(getUserData());
 
         request.onreadystatechange = function () {
-            console.log(request.status);
             if (request.readyState === 4 && request.status === 200){
                 let respId = JSON.parse(request.responseText);
                 addIdToLs(respId.id);
                 addNameToLs (respId.name);
-                console.log(request.responseText);
                 btnEnter.innerHTML = 'Добро пожаловать!';
                 setTimeout(function () {
                     window.location.href = 'content.html';
@@ -76,7 +74,7 @@ function loginRequest () {
         }   
     }
 }
-    
+
 function addIdToLs (id) {
     localStorage.setItem('userId', id);
 }

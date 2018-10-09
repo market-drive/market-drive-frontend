@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     function nameValidate () {
 
-        let regName = /^[А-Яа-яІіЇїЄєҐґ]+$/;
+        let regName = /^[А-Яа-яІіЇїЄєҐґ ]+$/;
         let name = document.getElementById('userName');
         let errorName = document.getElementById('error-name');
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
             name.style.background = 'rgba(193,66,66,0.4)';
         }
         else if(!regName.test(name.value)){
-            errorName.innerHTML = 'Имя может содержать только символы кириллицы без пробелов';
+            errorName.innerHTML = 'Имя может содержать только символы кириллицы';
             name.focus();
             name.style.background = 'rgba(193,66,66,0.4)';
         }
@@ -128,8 +128,9 @@ function registryRequest (data) {
             addNameToLs(userName);
             addIdToLs(idUser);
             btn.innerHTML = 'Добро пожаловать!';
-            window.location.href = 'content.html';
-
+            setTimeout(function () {
+                    window.location.href = 'content.html';
+            },1000);
         } else if (request.readyState === 4 && request.status === 409) {
             emailInput.focus();
             btn.innerHTML = 'Создать аккаунт'
@@ -141,25 +142,11 @@ function registryRequest (data) {
                 errorEmail.innerHTML = '';
                 emailInput.addEventListener('blur', emailValidate);
             });
-        } else {
+        } else if (request.readyState === 4 && request.status === 500) {
             btn.innerHTML = 'Создать аккаунт';
             errorConf.innerHTML = 'Сервер недоступен. Повторите попытку позже';
         }
     }
-}
-
-function addUserNameToHeader () {
-    let name = localStorage.getItem('userName');
-    if (name) {
-        // добавить имя
-        // кнопку Выход;
-    } else {
-        // скрыть кнопку "История";
-        // кнопку Вход;
-    }
-
-    // получить контейнер
-    // контейнер.innerHTML = name;
 }
 
 function addIdToLs (id) {
@@ -171,36 +158,3 @@ function addNameToLs (name) {
 }
 
 })
-function signOut () {
-    locStorage.clear();
-}
-
-// написать функцию Sign out
- 
-// function checkLocalStorage () {
-//    let locStorage = localStorage.gerItem('userId');
-//    if (locStorage) {
-
-//    }
-// }
-
-
-// Перезалил на сервер наш проект с исправлеными регистрацией и авторизацией. 
-// Теперь уникальность юзера будет определяться не по username, а по email.
-// При регистрации по адресу
-// http://54.37.125.180:8080/marketdrive/api/register
-// от вас объект
-// {"name":"Petrakov","password":"Petrakov","email":"petrakov@gmail.com"}
-// от нас либо
-// {"success":true,"id":28}
-// либо
-// {"success":false,"id":0,"reason":"Пользователь с таким e-mail уже существует."}
-// При авторизации по адресу
-// http://54.37.125.180:8080/marketdrive/api/login
-// от вас
-// {"password":"89745","email":"semenov@gmail.com"}
-// Ответ либо
-// {"success":true,"id":22}
-// либо
-// {"success":false,"id":0,"reason":"Incorrect email or password"}
-
