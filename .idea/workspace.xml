@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb46eeb3-08e1-4d9c-9629-8fe1bf198370" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/header-js.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/basket/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/basket/catalog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/basket/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/showGoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/showGoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenses/expenses-month.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-month.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenses/expenses-own.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-own.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenses/expenses-year.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses-year.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenses/expenses.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenses/expenses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/registry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry.js" beforeDir="false" afterPath="$PROJECT_DIR$/registry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templates.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,29 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templates.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/templates.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2358">
-              <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="164" column="7" lean-forward="true" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basket.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basket/basket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+            <state relative-caret-position="54">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -100,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="basket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basket/basket.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
@@ -160,7 +147,6 @@
         <option value="$PROJECT_DIR$/public/api/storage.json" />
         <option value="$PROJECT_DIR$/products.json" />
         <option value="$PROJECT_DIR$/history-js.js" />
-        <option value="$PROJECT_DIR$/templates/templates.html" />
         <option value="$PROJECT_DIR$/templates/push-to-basket.js" />
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/basket/catalog.js" />
@@ -168,10 +154,11 @@
         <option value="$PROJECT_DIR$/templates/templates.js" />
         <option value="$PROJECT_DIR$/basket/index.js" />
         <option value="$PROJECT_DIR$/showGoods.js" />
-        <option value="$PROJECT_DIR$/content.html" />
         <option value="$PROJECT_DIR$/clear-localStorage.js" />
-        <option value="$PROJECT_DIR$/basket/basket.html" />
         <option value="$PROJECT_DIR$/basket/basket.js" />
+        <option value="$PROJECT_DIR$/templates/templates.html" />
+        <option value="$PROJECT_DIR$/basket/basket.html" />
+        <option value="$PROJECT_DIR$/content.html" />
       </list>
     </option>
   </component>
@@ -218,11 +205,6 @@
               <item name="Market drive" type="b2602c69:ProjectViewProjectNode" />
               <item name="Market drive" type="462c0819:PsiDirectoryNode" />
               <item name="basket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Market drive" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Market drive" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -471,12 +453,12 @@
       <workItem from="1539174368961" duration="1727000" />
       <workItem from="1539176186788" duration="1744000" />
       <workItem from="1539178049424" duration="1732000" />
-      <workItem from="1539179923040" duration="1239000" />
+      <workItem from="1539179923040" duration="1535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="792449000" />
+    <option name="totallyTimeSpent" value="792745000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2358">
-          <caret line="131" column="36" selection-start-line="131" selection-start-column="36" selection-end-line="131" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basket/send-basket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -798,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="164" column="7" lean-forward="true" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/showGoods.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2934">
@@ -819,17 +787,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basket/basket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basket/basket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="207" column="64" selection-start-line="207" selection-start-column="64" selection-end-line="207" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basket/basket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="197" column="64" selection-start-line="197" selection-start-column="64" selection-end-line="197" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
