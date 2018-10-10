@@ -1,35 +1,9 @@
 
+
+
+
+
 var template = (function ($) {
-
-    var string ;
-var btn = document.getElementById('create');
-var res = document.getElementById('template');
-
-
-
-var nameList = document.createElement('span');
-function listCreate() {
-    var string;
-    var tr = document.createElement('tr');
-    var td = document.createElement('td');
-
-    td.classList.add("template");
-    var create = prompt('Введите название шаблона!');
-    window.location.href = '../content.html';
-
-    for (var i = 0; i < create.length; i++) {
-            string = create;
-    }
-    localStorage.setItem('templates', 'true');
-    nameList.innerHTML = string;
-    td.appendChild(nameList);
-    tr.appendChild(td);
-    res.appendChild(tr);
-    }
-    $(btn).on('click', listCreate);
-
-
-
     var templateData;
     var opts = {};
 
@@ -37,17 +11,21 @@ function listCreate() {
     function init(options) {
         initOptions(options);
         updateData();
-        showTemplate();
+        // showTemplate();
+        // renderBasket();
         if (opts.showTemplateOnInit) {
             showTemplate();
         }
+        // if(opts.showTemplateInit){
+        //     renderBasket();
+        // }
         _bindHandlers();
     }
 
     function initOptions(options) {
         var defaultOptions = {
             showTemplateOnInit: true,    //показывать ли шаблоны при инициализации
-            showMenuTemplateOnInit: true //показывать и количество товаров в меню
+            showTemplateInit: true
         };
         _.defaults(options || {}, defaultOptions);
         opts = _.clone(options);
@@ -59,9 +37,107 @@ function listCreate() {
         clickRemoveFromTemplate();
     }
 
+
+
+    var btn = document.getElementById('create');
+    var res = document.getElementById('templates-list');
+    var add = document.getElementById('add');
+
+
+    var string,
+        tr,
+        td,
+        nameList,
+        create;
+    var out = "";
+
+    //var list = document.getElementById('list');
+
+    function createList() {
+        nameList = document.createElement('span');
+        nameList.classList.add('spanStyle');
+        create = prompt('Введите название шаблона!');
+        localStorage.setItem(create, JSON.stringify([]));
+        localStorage.setItem('templates', 'true');
+        window.location.href = '../content.html';
+        nameList.innerHTML = create;
+        res.appendChild(nameList);
+
+    }
+    $(btn).on('click', createList);
+
+    //res.addEventListener('click', listCreate);
+
+    function saveList() {
+        var good = localStorage.getItem(key,value);
+        good.forEach()
+
+    }
+
+
+
+// function listCreate() {
+//          //tr = document.createElement('tr');
+//          //td = document.createElement('td');
+//          nameList = document.createElement('span');
+//          nameList.classList = 'list';
+//          create = prompt('Введите название шаблона!');
+//
+//
+//     for (var i = 0; i < create.length; i++) {
+//         string = create;
+//     }
+//     localStorage.setItem('templates', 'true');
+//     //localStorage.setItem(out, JSON.stringify([]));
+//     //window.localStorage.setItem(string ,JSON.stringify([]));
+//     nameList.innerHTML = string;
+//
+//     //window.location.href = '../content.html';
+//     // td.appendChild(nameList);
+//     // tr.appendChild(td);
+//       res.appendChild(nameList);
+//     }
+//     $(btn).on('click', listCreate);
+
+
+
+    // Storage.prototype.setObject = function (key, value) {
+    //      this.setItem(key, JSON.stringify(value));
+    // };
+    //
+    // Storage.prototype.getObject = function (key) {
+    //     var value = this.getItem(key);
+    //     return value && JSON.parse(value);
+    // };
+
+
+
+
+
+
+
+    // var push = document.getElementById('push-to-basket');
+    // var templateGoods = JSON.parse(localStorage.getItem('list'));
+    // var basketGoods = localStorage.getItem('basket');
+    // var basketItem = document.getElementById('basket-item');
+    // function renderBasket() {
+    //     var template = _.template($('#basket-template').html()),
+    //         data = {
+    //             goods: templateGoods,
+    //         };
+    //     basketGoods.push(templateGoods);
+    //     $('#basket-item').html(template(data));
+    //     totalItem();
+    // }
+    // $(push).on('click',renderBasket);
+    //
+    // function totalItem() {
+    //     $('#total-template-sum').html(getSum());
+    // }
+
     //получаем данные
     function updateData() {
-        templateData = JSON.parse(localStorage.getItem(string)) || [];
+        templateData = JSON.parse(localStorage.getItem('list')) || [];
         return templateData;
     }
     //возвращаем данные
@@ -70,7 +146,7 @@ function listCreate() {
     }
     //сохраняем данные в local storage
     function updateTemplate() {
-        localStorage.setItem(string, JSON.stringify(templateData));
+        localStorage.setItem('list', JSON.stringify(templateData));
         return templateData;
     }
 
@@ -104,7 +180,7 @@ function listCreate() {
             if (item.count < 1) {
                 remove(id);
             }
-            saveData();
+            updateTemplate();
         }
         // return getById(id) || {};
         return _.findWhere(templateData, {id:id}) || {};
@@ -179,6 +255,19 @@ function listCreate() {
             totalTemplateSum();
         });
     }
+    //
+    // var getBasket = document.getElementById('basket-item');
+    // var push = document.getElementById('push-to-basket');
+    // var get = localStorage.getItem('list');
+    //
+    // function addBasket() {
+    //     var template = _.template($('#basket-template').html()),
+    //         data = {
+    //         goods: get
+    //         };
+    //     $('#basket-item').html(template(data));
+    // }
+    // $(push).on('click',addBasket);
 
     return  {
         init: init,

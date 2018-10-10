@@ -35,7 +35,6 @@
     var basketData = [] ;
     var templateData = [];
     var string;
-    var nameList;
     var milk,
         grocery,
         hotDrinks,
@@ -53,8 +52,9 @@
         clothes;
     var div = document.getElementById('result');
 
+    var baskets = localStorage.getItem('basket') ;
 var templates = localStorage.getItem('templates');
-        $.getJSON('products.json', function (data) {
+        $.getJSON('http://54.37.125.180:8080/marketdrive/api/products', function (data) {
             for (var key in data) {
                 if (key === 'milk') {
                     milk = data[key];
@@ -101,13 +101,10 @@ var templates = localStorage.getItem('templates');
                 else if (key === 'clothes'){
                     clothes = data[key];
                 }
-
             }
+
         var milkOut = "";
-
-
         function showMilk() {
-
                 for (var i = 0; i < milk.length; i++) {
                     milkOut += '<div id="goods-list">';
                     milkOut += '<img src="' + milk[i].imageUrl + '" width="200" height="150">'
@@ -115,10 +112,10 @@ var templates = localStorage.getItem('templates');
                         + '<span>"' + milk[i].brand + '"</span>' + '<br>'
                         + '<span class="price-basket">"ціна -"  '+ milk[i].price +'  грн "</span>' + '<br>';
                     if(templates){
-                        milkOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В шаблоны</button>';
+                        milkOut += '<button class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В шаблоны</button>';
                     }
-                    else{
-                        milkOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В корзину</button>';
+                    else if(baskets){
+                        milkOut += '<button class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + milk[i].id + '"  data-name="' + milk[i].name + '"  data-price="' + milk[i].price + '">В корзину</button>';
                     }
                     milkOut += '</div>';
                 }
@@ -134,21 +131,20 @@ var templates = localStorage.getItem('templates');
             var prod = grocery[prop];
             groceryOut += '<div id="goods-list">';
             groceryOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
-            groceryOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            groceryOut += '<span class="name-basket" data-name="' + prod.name +'">"' + prod.name + '"</span>' + '<br>';
             groceryOut += '<span>"' + prod.brand + '"</span>' + '<br>';
-            groceryOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
-            if(templates){
-                groceryOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.brand + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            groceryOut += '<span class="price-basket">"ціна -"  ' + prod.price + '  грн "</span>' + '<br>';
+            if (templates) {
+                groceryOut += '<button class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
             }
-            else{
-                groceryOut += '<button type="submit" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.brand + '"  data-price="' + prod.price + '">В корзину</button>';
+            else {
+                groceryOut += '<button class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-prod="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
             }
             groceryOut += '</div>';
         }
         $(result).html(groceryOut);
         $('button.template-add').on('click', clickBtnTemplate);
         $('button.btn-add').on('click', clickBtn);
-
     }
     showGrocery();
     $(groceryClick).on('click', showGrocery);
@@ -158,11 +154,16 @@ var templates = localStorage.getItem('templates');
         for (var prop in hotDrinks) {
             var prod = hotDrinks[prop];
             hotDrinksOut += '<div id="goods-list">';
-            hotDrinksOut += '<img src="' + prod.imageUrl + '" width="200" height="150">'
-                + '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>'
-                + '<span>"' + prod.brand + '"</span>' + '<br>'
-                + '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
-            hotDrinksOut += '<button class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            hotDrinksOut += '<img src="' + prod.imageUrl + '" width="200" height="150">';
+            hotDrinksOut += '<span class="name-basket">"' + prod.name + '"</span>'  + '<br>';
+            hotDrinksOut += '<span>"' + prod.brand + '"</span>' + '<br>';
+            hotDrinksOut += '<span class="price-basket">"ціна -"  '+ prod.price +'  грн "</span>' + '<br>';
+            if(templates){
+                hotDrinksOut += '<button type="submit" class="template-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В шаблоны</button>';
+            }
+            else{
+                hotDrinksOut += '<button type="submit" id="send" class="btn-add btn btn-sm btn-outline-secondary send-goods" data-id="' + prod.id + '"  data-name="' + prod.name + '"  data-price="' + prod.price + '">В корзину</button>';
+            }
             hotDrinksOut += '</div>';
         }
         $(result).html(hotDrinksOut);
@@ -448,8 +449,19 @@ var templates = localStorage.getItem('templates');
         $('button.btn-add').on('click', clickBtn);
     }
     $(clothesClick).on('click', showClothes);
-        });
 
+
+
+
+
+
+    // $('button.btn-add').on('click',function (e) {
+    //     e.preventDefault();
+    //     var btn = $('button.btn-add');
+    //     var data;
+    //     data += btn.data('prod');
+    //     console.log(data);
+    // });
             //функции добавление товаров в корзину и шаблоны
 
             function byId(id) {
@@ -457,13 +469,13 @@ var templates = localStorage.getItem('templates');
                 }
 
                 function updateTemplate() {
-                    templateData = JSON.parse(localStorage.getItem(string)) || [];
+                    templateData = JSON.parse(localStorage.getItem('list')) || [];
                     return templateData;
                 }
 
                 //сохраняем данные в local storage
                 function saveTemplate() {
-                    localStorage.setItem(string , JSON.stringify(templateData));
+                    localStorage.setItem('list', JSON.stringify(templateData));
                     return templateData;
                 }
 
@@ -479,10 +491,15 @@ var templates = localStorage.getItem('templates');
                     saveTemplate();
                     return item;
                 }
+
+
+
+
 function clickBtnTemplate() {
     $('#result').off('click', 'button');
     $('#result').on('click', 'button', function () {
         var $this = $(this);
+        var btn = $('.template-add');
         addTemplate({
             id: +$this.data('id'),
             name: +$this.data('name'),
@@ -492,8 +509,6 @@ function clickBtnTemplate() {
             alert('Товар добавлен в шаблоны');
     });
 }
-
-
 
                 function getById(id) {
                     return _.findWhere(basketData, {id: id});
@@ -524,17 +539,19 @@ function clickBtnTemplate() {
                 }
 
 
-
 function clickBtn() {
     $('#result').off('click', 'button');
     $('#result').on('click', 'button', function () {
+        var btn = $('#send');
         var $this = $(this);
         add({
             id: +$this.data('id'),
-            name: +$this.data('name'),
+            name: +$this.data('prod'),
             price: +$this.data('price'),
             count: 1
         });
             alert('Товар добавлен в корзину');
     });
 }
+
+        });

@@ -6,17 +6,21 @@ var catalog = (function ($) {
         showCatalog();
     }
     var basketData;
+    var goods;
     function showCatalog() {
         var template = _.template($('#catalog-template').html());
         var $goods = $('#result');
-        $.getJSON('../products.json', function (data) {
+        $.getJSON('', function (data) {
 
             for (var key in data) {
                 if (key === 'milk') {
                     basketData = data[key];
+                    for(var key in basketData){
+                        goods = basketData[key];
+                    }
                 }
             }
-            $goods.html(template({goods: basketData}));
+            $goods.html(template({goods: goods}));
         });
     }
 

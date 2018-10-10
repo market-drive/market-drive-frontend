@@ -90,10 +90,11 @@
 
 
         <div class="row">
+            <!--<table id="template" class="table col-3 offset-1">-->
+            <!--</table>-->
+                <div id="templates-list">
 
-            <table id="template" class="table col-3 offset-1">
-
-            </table>
+            </div>
         </div>
         <div class="row">
                 <div class="offset-md-3 col-md-5 col-lg-6 offset-lg-4">
@@ -116,7 +117,7 @@
         </div>
             <div class="row">
                 <div class="offset-md-4 col-md-4 col-lg-3 offset-lg-4">
-                    <a class="nav-link" href="../content.html" alt="">Добавить товар</a>
+                    <a id="add" class="nav-link" href="../content.html" alt="">Добавить товар</a>
                 </div>
             </div>
             <div class="row">
@@ -127,7 +128,10 @@
             </div>
             <div class="row">
                 <div class="offset-md-5 col-lg-2 offset-lg-6">
-                    <button class="btn btn-fixed btn-main">Добавить в корзину</button>
+                    <form action="../basket/basket.html">
+                        <button id="push-to-basket" class="btn btn-fixed btn-main">Добавить в корзину</button>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -161,7 +165,6 @@
     <script id="templates" type="text/template">
         <% _.each(goods, function(good) { %>
         <tr class="add-template-item" data-id="<%= good.id %>">
-            <!--<td><%= good.id %></td>-->
             <td><%= good.name %></td>
             <td>
                  <span
@@ -197,8 +200,9 @@
 
     <script type="text/javascript " src="../underscore.js"></script>
     <script type="text/javascript" src="../basket/index.js"></script>
-    <script type="text/javascript" src="templates.js"></script>
     <script type="text/javascript" src="../showGoods.js"></script>
+    <script type="text/javascript" src="../basket/basket.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

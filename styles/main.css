@@ -30,6 +30,12 @@ button:focus {
   width: 185px;
 }
 
+.user-name {
+  color: #3cabfe;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 /* registry */
 .white-background {
   background-image: none;
@@ -103,7 +109,7 @@ header .logo img {
   height: 100%;
 }
 header form {
-  margin-left: 135px;
+  margin-left: 60px;
 }
 header form .input-search {
   width: 135px;
@@ -125,7 +131,6 @@ header form .button-search {
   border-radius: 50px;
   background-color: #f1f1f1;
   color: #000;
-  margin-left: 20px;
   margin-top: 10px;
   width: 75px;
 }
@@ -136,7 +141,7 @@ header form .button-search:hover {
 header .exit {
   margin-bottom: 10px;
   margin-top: 5px;
-  margin-left: 80px;
+  margin-left: 20px;
   width: 70px;
   height: 25px;
 }
@@ -147,6 +152,14 @@ header .exit .exit-link {
   text-decoration: none;
   padding: 0 20px;
   text-align: center;
+}
+header .exit .exit-link a {
+  color: #3cabfe;
+  text-decoration: none;
+}
+header .exit .exit-link a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 header .exit .exit-link:hover {
   border-radius: 50px;
@@ -333,8 +346,8 @@ thead {
 #goods-list {
   position: relative;
   height: 300px;
-  /*box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
-  /*-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);*/
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
   margin: 10px 10px;
   text-align: center;
 }
@@ -349,6 +362,10 @@ thead {
   position: absolute;
   bottom: 0;
   margin: 10px 10px;
+}
+
+.template-add {
+  padding-left: 1px;
 }
 
 .send-goods:hover {
@@ -492,6 +509,51 @@ footer .social-menu .google:hover {
   background-position: -68px -150px;
 }
 
+@media all and (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+
+  header form {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  header .exit {
+    margin-left: -20px;
+  }
+  header .button-search {
+    display: none;
+  }
+  header .user-name {
+    margin-top: -50px;
+  }
+  header .fa-search {
+    position: relative;
+    left: 170px;
+    background-color: #00e1c7;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    padding: 4px;
+  }
+  header .fa-search:hover {
+    background-color: #f1f1f1;
+    color: #00e1c7;
+  }
+}
+footer .mail {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+}
+footer .mail p {
+  width: 300px;
+  margin-top: 10px;
+}
+
 @media all and (max-width: 991px) and (min-width: 768px) {
   body {
     font-size: 15px;
@@ -511,6 +573,9 @@ footer .social-menu .google:hover {
   }
   header .button-search {
     display: none;
+  }
+  header .user-name {
+    margin-top: -50px;
   }
   header .fa-search {
     position: relative;
@@ -575,10 +640,6 @@ footer .mail p {
   header form {
     margin-top: 10px;
     margin-left: 5px;
-    margin-right: 120px;
-  }
-  header .exit {
-    margin-left: 40px;
   }
   header .button-search {
     display: none;
